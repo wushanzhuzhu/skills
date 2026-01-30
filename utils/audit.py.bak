@@ -1,0 +1,66 @@
+import requests
+import urllib3
+from TestCaseApp.clonetest import encodePass
+import  ssl
+# 全局禁用SSL验证
+ssl._create_default_https_context = ssl._create_unverified_context
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+class ArcherAudit:
+    def __init__(self, username, password, url):
+        """初始化配置参数"""
+        self.base_url = url  # API基础地址
+        self.session = requests.Session()
+        self.auth_token = None
+        self.timeout = 20 * 60  # 20分钟超时时间
+        self.session.verify = False  # 禁用SSL验证
+        self.username = username
+        self.password = password
+        urllib3.disable_warnings()
+
+    def setSession(self) -> bool:
+        """
+        POST登录接口，返回认证token并设置会话头和Cookie
+        包含：
+        - Authorization: Bearer Token
+        - Cookie: sessionId=xxx; userId=xxx
+        """
+        login_url = f"{self.base_url}/api/resource/login"
+        payload = {
+            "loginName": self.username,
+            "password": encodePass(self.password),  # 使用密码加密方法
+            "loginType": "front"
+        }
+
+        # 发送登录请求
+        #response = self.session.post(login_url, json=payload)
+        response = self.session.post(login_url, json=payload, verify=False)
+        print(response.json())
+        if response.status_code == 200:
+            # 提取响应中的token和sessionID
+            response_data = response.json()
+            self.auth_token = response_data.get("token")
+            session_id = response_data.get("data").get("sessionId")  # 假设响应中包含sessionId字段
+            print("sessionId: ", session_id)
+            # 固定用户ID（根据实际业务需求调整）
+            user_id = response_data.get("data").get("userId")
+            print("user_id: ", user_id)
+            # 设置认证头
+            auth_header = {
+                "Authorization": f"Bearer {self.auth_token}",
+                "Content-Type": "application/json"
+            }
+            self.session.headers.update(auth_header)
+
+            # 设置Cookie
+            #cookie_value = f"sessionId={session_id}; userId={user_id}"
+            self.session.cookies.set("sessionId", session_id)  # 推荐使用cookies.set方法
+            self.session.cookies.set("userId", user_id)
+            # 也可以直接设置Cookie头（两种方式二选一）
+            # self.session.headers.update({"Cookie": cookie_value})
+            return True
+        return False
+    
+if __name__ == "__main__":
+    audit = ArcherAudit("admin", "Admin@123", "https://172.118.57.100")
+    print(audit.setSession())

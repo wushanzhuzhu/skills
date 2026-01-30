@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环境测试平台</title>
+    <style>
+        body {
+            margin: 0;
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        .env-table {
+            width: 80%;
+            max-width: 600px;
+            border-collapse: collapse;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        .env-table th, .env-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
+        }
+        .env-table th {
+            background-color: #f8f8f8;
+            font-weight: bold;
+        }
+        .operation-select {
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table class="env-table">
+        <thead>
+            <tr>
+                <th>环境地址</th>
+                <th>操作项</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://172.118.13.201"  target="_blank">https://172.118.13.201</a></td>
+                <td>
+                    <select class="operation-select" onchange="handleSelectChange(this)">
+                        <option value="">请选择</option>
+                        <option value="disk_info">查询磁盘的副本数信息</option>
+                        <option value="b">新部署环境初始化（密码修改+证书导入）</option>
+                        <option value="c">选项C</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function handleSelectChange(select) {
+        // 获取环境地址
+        const envText = select.closest('tr')
+                     .querySelector('td:first-child a')
+                     .textContent;
+
+        // URL编码环境地址
+        const encodedEnv = encodeURIComponent(envText);
+
+        // 跳转并传递参数
+        window.location.href = `/disk/${select.value}?serverip=${encodedEnv}`;
+        }
+    </script>
+</body>
+</html>
