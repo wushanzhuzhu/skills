@@ -1,4 +1,0 @@
-Version: OpenPGP.js v4.10.10
-Comment: https://openpgpjs.org
-
-mock_pgp_content_here

@@ -132,7 +132,7 @@ def get_audit() -> tuple:
     :return tuple: 包含交互权限信息的元组
         - base_url: 平台基础URL
         - username: 用户名
-        - password: 密码
+        - password: 
         - auth_token: 认证token
     
     === 上下文依赖规则 ===
@@ -277,7 +277,7 @@ def get_volumes():
     return global_state.volumes.disks if global_state.volumes else "当前会话中未保存虚拟磁盘信息，请先调用getSession方法获取安超平台的交互会话."
 
 @mcp.tool()
-def getSession(url: str,name: str="admin", password: str="Admin@123") -> str:
+def getSession(url: str,name: str="admin", password: str="") -> str:
     """
     === 工具功能描述 ===
     安超平台交互session获取工具

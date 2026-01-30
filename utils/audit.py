@@ -114,5 +114,5 @@ class ArcherAudit:
             return False
     
 if __name__ == "__main__":
-    audit = ArcherAudit("admin", "Admin@123", "https://172.118.57.100")
+    audit = ArcherAudit("", "", "https://172.118.57.100")
     audit.setSession()
