@@ -1,0 +1,4764 @@
+{
+  "task_summary": {
+    "start_num": 210,
+    "end_num": 1000,
+    "total_disks": 791,
+    "disk_size_gb": 10,
+    "start_time": 1769868550.4278014,
+    "end_time": 1769868550.445891,
+    "duration_seconds": 0.01808953285217285,
+    "success_count": 0,
+    "failed_count": 791,
+    "success_rate": 0.0,
+    "total_capacity_gb": 0,
+    "environment": "生产环境"
+  },
+  "results": [
+    {
+      "disk_name": "batch-0210",
+      "disk_num": 210,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0211",
+      "disk_num": 211,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0212",
+      "disk_num": 212,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0213",
+      "disk_num": 213,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0214",
+      "disk_num": 214,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0215",
+      "disk_num": 215,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0216",
+      "disk_num": 216,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0217",
+      "disk_num": 217,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0218",
+      "disk_num": 218,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0219",
+      "disk_num": 219,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0220",
+      "disk_num": 220,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0221",
+      "disk_num": 221,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0222",
+      "disk_num": 222,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0223",
+      "disk_num": 223,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0224",
+      "disk_num": 224,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0225",
+      "disk_num": 225,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0226",
+      "disk_num": 226,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0227",
+      "disk_num": 227,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0228",
+      "disk_num": 228,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0229",
+      "disk_num": 229,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0230",
+      "disk_num": 230,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0231",
+      "disk_num": 231,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0232",
+      "disk_num": 232,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0233",
+      "disk_num": 233,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0234",
+      "disk_num": 234,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0235",
+      "disk_num": 235,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0236",
+      "disk_num": 236,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0237",
+      "disk_num": 237,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0238",
+      "disk_num": 238,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0239",
+      "disk_num": 239,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0240",
+      "disk_num": 240,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0241",
+      "disk_num": 241,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0242",
+      "disk_num": 242,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0243",
+      "disk_num": 243,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0244",
+      "disk_num": 244,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0245",
+      "disk_num": 245,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0246",
+      "disk_num": 246,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0247",
+      "disk_num": 247,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0248",
+      "disk_num": 248,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0249",
+      "disk_num": 249,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0250",
+      "disk_num": 250,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0251",
+      "disk_num": 251,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0252",
+      "disk_num": 252,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0253",
+      "disk_num": 253,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0254",
+      "disk_num": 254,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0255",
+      "disk_num": 255,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0256",
+      "disk_num": 256,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0257",
+      "disk_num": 257,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0258",
+      "disk_num": 258,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0259",
+      "disk_num": 259,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0260",
+      "disk_num": 260,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0261",
+      "disk_num": 261,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0262",
+      "disk_num": 262,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0263",
+      "disk_num": 263,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0264",
+      "disk_num": 264,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0265",
+      "disk_num": 265,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0266",
+      "disk_num": 266,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0267",
+      "disk_num": 267,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0268",
+      "disk_num": 268,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0269",
+      "disk_num": 269,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0270",
+      "disk_num": 270,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0271",
+      "disk_num": 271,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0272",
+      "disk_num": 272,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0273",
+      "disk_num": 273,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0274",
+      "disk_num": 274,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0275",
+      "disk_num": 275,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0276",
+      "disk_num": 276,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0277",
+      "disk_num": 277,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0278",
+      "disk_num": 278,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0279",
+      "disk_num": 279,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0280",
+      "disk_num": 280,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0281",
+      "disk_num": 281,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0282",
+      "disk_num": 282,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0283",
+      "disk_num": 283,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0284",
+      "disk_num": 284,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0285",
+      "disk_num": 285,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0286",
+      "disk_num": 286,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0287",
+      "disk_num": 287,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0288",
+      "disk_num": 288,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0289",
+      "disk_num": 289,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0290",
+      "disk_num": 290,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0291",
+      "disk_num": 291,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0292",
+      "disk_num": 292,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0293",
+      "disk_num": 293,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0294",
+      "disk_num": 294,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0295",
+      "disk_num": 295,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0296",
+      "disk_num": 296,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0297",
+      "disk_num": 297,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0298",
+      "disk_num": 298,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0299",
+      "disk_num": 299,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0300",
+      "disk_num": 300,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0301",
+      "disk_num": 301,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0302",
+      "disk_num": 302,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0303",
+      "disk_num": 303,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0304",
+      "disk_num": 304,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0305",
+      "disk_num": 305,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0306",
+      "disk_num": 306,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0307",
+      "disk_num": 307,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0308",
+      "disk_num": 308,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0309",
+      "disk_num": 309,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0310",
+      "disk_num": 310,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0311",
+      "disk_num": 311,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0312",
+      "disk_num": 312,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0313",
+      "disk_num": 313,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0314",
+      "disk_num": 314,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0315",
+      "disk_num": 315,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0316",
+      "disk_num": 316,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0317",
+      "disk_num": 317,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0318",
+      "disk_num": 318,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0319",
+      "disk_num": 319,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0320",
+      "disk_num": 320,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0321",
+      "disk_num": 321,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0322",
+      "disk_num": 322,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0323",
+      "disk_num": 323,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0324",
+      "disk_num": 324,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0325",
+      "disk_num": 325,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0326",
+      "disk_num": 326,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0327",
+      "disk_num": 327,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0328",
+      "disk_num": 328,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0329",
+      "disk_num": 329,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0330",
+      "disk_num": 330,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0331",
+      "disk_num": 331,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0332",
+      "disk_num": 332,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0333",
+      "disk_num": 333,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0334",
+      "disk_num": 334,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0335",
+      "disk_num": 335,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0336",
+      "disk_num": 336,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0337",
+      "disk_num": 337,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0338",
+      "disk_num": 338,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0339",
+      "disk_num": 339,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0340",
+      "disk_num": 340,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0341",
+      "disk_num": 341,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0342",
+      "disk_num": 342,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0343",
+      "disk_num": 343,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0344",
+      "disk_num": 344,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0345",
+      "disk_num": 345,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0346",
+      "disk_num": 346,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0347",
+      "disk_num": 347,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0348",
+      "disk_num": 348,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0349",
+      "disk_num": 349,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0350",
+      "disk_num": 350,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0351",
+      "disk_num": 351,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0352",
+      "disk_num": 352,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0353",
+      "disk_num": 353,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0354",
+      "disk_num": 354,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0355",
+      "disk_num": 355,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0356",
+      "disk_num": 356,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0357",
+      "disk_num": 357,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0358",
+      "disk_num": 358,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0359",
+      "disk_num": 359,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0360",
+      "disk_num": 360,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0361",
+      "disk_num": 361,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0362",
+      "disk_num": 362,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0363",
+      "disk_num": 363,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0364",
+      "disk_num": 364,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0365",
+      "disk_num": 365,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0366",
+      "disk_num": 366,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0367",
+      "disk_num": 367,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0368",
+      "disk_num": 368,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0369",
+      "disk_num": 369,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0370",
+      "disk_num": 370,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0371",
+      "disk_num": 371,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0372",
+      "disk_num": 372,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0373",
+      "disk_num": 373,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0374",
+      "disk_num": 374,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0375",
+      "disk_num": 375,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0376",
+      "disk_num": 376,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0377",
+      "disk_num": 377,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0378",
+      "disk_num": 378,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0379",
+      "disk_num": 379,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0380",
+      "disk_num": 380,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0381",
+      "disk_num": 381,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0382",
+      "disk_num": 382,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0383",
+      "disk_num": 383,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0384",
+      "disk_num": 384,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0385",
+      "disk_num": 385,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0386",
+      "disk_num": 386,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0387",
+      "disk_num": 387,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0388",
+      "disk_num": 388,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0389",
+      "disk_num": 389,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0390",
+      "disk_num": 390,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0391",
+      "disk_num": 391,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0392",
+      "disk_num": 392,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0393",
+      "disk_num": 393,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0394",
+      "disk_num": 394,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0395",
+      "disk_num": 395,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0396",
+      "disk_num": 396,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0397",
+      "disk_num": 397,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0398",
+      "disk_num": 398,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0399",
+      "disk_num": 399,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0400",
+      "disk_num": 400,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0401",
+      "disk_num": 401,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0402",
+      "disk_num": 402,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0403",
+      "disk_num": 403,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0404",
+      "disk_num": 404,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0405",
+      "disk_num": 405,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0406",
+      "disk_num": 406,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0407",
+      "disk_num": 407,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0408",
+      "disk_num": 408,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0409",
+      "disk_num": 409,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0410",
+      "disk_num": 410,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0411",
+      "disk_num": 411,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0412",
+      "disk_num": 412,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0413",
+      "disk_num": 413,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0414",
+      "disk_num": 414,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0415",
+      "disk_num": 415,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0416",
+      "disk_num": 416,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0417",
+      "disk_num": 417,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0418",
+      "disk_num": 418,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0419",
+      "disk_num": 419,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0420",
+      "disk_num": 420,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0421",
+      "disk_num": 421,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0422",
+      "disk_num": 422,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0423",
+      "disk_num": 423,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0424",
+      "disk_num": 424,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0425",
+      "disk_num": 425,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0426",
+      "disk_num": 426,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0427",
+      "disk_num": 427,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0428",
+      "disk_num": 428,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0429",
+      "disk_num": 429,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0430",
+      "disk_num": 430,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0431",
+      "disk_num": 431,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0432",
+      "disk_num": 432,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0433",
+      "disk_num": 433,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0434",
+      "disk_num": 434,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0435",
+      "disk_num": 435,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0436",
+      "disk_num": 436,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0437",
+      "disk_num": 437,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0438",
+      "disk_num": 438,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0439",
+      "disk_num": 439,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0440",
+      "disk_num": 440,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0441",
+      "disk_num": 441,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0442",
+      "disk_num": 442,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0443",
+      "disk_num": 443,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0444",
+      "disk_num": 444,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0445",
+      "disk_num": 445,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0446",
+      "disk_num": 446,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0447",
+      "disk_num": 447,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0448",
+      "disk_num": 448,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0449",
+      "disk_num": 449,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0450",
+      "disk_num": 450,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0451",
+      "disk_num": 451,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0452",
+      "disk_num": 452,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0453",
+      "disk_num": 453,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0454",
+      "disk_num": 454,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0455",
+      "disk_num": 455,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0456",
+      "disk_num": 456,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0457",
+      "disk_num": 457,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0458",
+      "disk_num": 458,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0459",
+      "disk_num": 459,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0460",
+      "disk_num": 460,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0461",
+      "disk_num": 461,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0462",
+      "disk_num": 462,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0463",
+      "disk_num": 463,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0464",
+      "disk_num": 464,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0465",
+      "disk_num": 465,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0466",
+      "disk_num": 466,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0467",
+      "disk_num": 467,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0468",
+      "disk_num": 468,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0469",
+      "disk_num": 469,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0470",
+      "disk_num": 470,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0471",
+      "disk_num": 471,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0472",
+      "disk_num": 472,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0473",
+      "disk_num": 473,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0474",
+      "disk_num": 474,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0475",
+      "disk_num": 475,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0476",
+      "disk_num": 476,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0477",
+      "disk_num": 477,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0478",
+      "disk_num": 478,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0479",
+      "disk_num": 479,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0480",
+      "disk_num": 480,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0481",
+      "disk_num": 481,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0482",
+      "disk_num": 482,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0483",
+      "disk_num": 483,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0484",
+      "disk_num": 484,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0485",
+      "disk_num": 485,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0486",
+      "disk_num": 486,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0487",
+      "disk_num": 487,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0488",
+      "disk_num": 488,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0489",
+      "disk_num": 489,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0490",
+      "disk_num": 490,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0491",
+      "disk_num": 491,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0492",
+      "disk_num": 492,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0493",
+      "disk_num": 493,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0494",
+      "disk_num": 494,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0495",
+      "disk_num": 495,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0496",
+      "disk_num": 496,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0497",
+      "disk_num": 497,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0498",
+      "disk_num": 498,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0499",
+      "disk_num": 499,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0500",
+      "disk_num": 500,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0501",
+      "disk_num": 501,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0502",
+      "disk_num": 502,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0503",
+      "disk_num": 503,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0504",
+      "disk_num": 504,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0505",
+      "disk_num": 505,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0506",
+      "disk_num": 506,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0507",
+      "disk_num": 507,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0508",
+      "disk_num": 508,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0509",
+      "disk_num": 509,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0510",
+      "disk_num": 510,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0511",
+      "disk_num": 511,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0512",
+      "disk_num": 512,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0513",
+      "disk_num": 513,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0514",
+      "disk_num": 514,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0515",
+      "disk_num": 515,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0516",
+      "disk_num": 516,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0517",
+      "disk_num": 517,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0518",
+      "disk_num": 518,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0519",
+      "disk_num": 519,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0520",
+      "disk_num": 520,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0521",
+      "disk_num": 521,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0522",
+      "disk_num": 522,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0523",
+      "disk_num": 523,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0524",
+      "disk_num": 524,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0525",
+      "disk_num": 525,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0526",
+      "disk_num": 526,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0527",
+      "disk_num": 527,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0528",
+      "disk_num": 528,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0529",
+      "disk_num": 529,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0530",
+      "disk_num": 530,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0531",
+      "disk_num": 531,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0532",
+      "disk_num": 532,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0533",
+      "disk_num": 533,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0534",
+      "disk_num": 534,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0535",
+      "disk_num": 535,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0536",
+      "disk_num": 536,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0537",
+      "disk_num": 537,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0538",
+      "disk_num": 538,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0539",
+      "disk_num": 539,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0540",
+      "disk_num": 540,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0541",
+      "disk_num": 541,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0542",
+      "disk_num": 542,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0543",
+      "disk_num": 543,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0544",
+      "disk_num": 544,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0545",
+      "disk_num": 545,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0546",
+      "disk_num": 546,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0547",
+      "disk_num": 547,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0548",
+      "disk_num": 548,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0549",
+      "disk_num": 549,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0550",
+      "disk_num": 550,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0551",
+      "disk_num": 551,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0552",
+      "disk_num": 552,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0553",
+      "disk_num": 553,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0554",
+      "disk_num": 554,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0555",
+      "disk_num": 555,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0556",
+      "disk_num": 556,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0557",
+      "disk_num": 557,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0558",
+      "disk_num": 558,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0559",
+      "disk_num": 559,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0560",
+      "disk_num": 560,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0561",
+      "disk_num": 561,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0562",
+      "disk_num": 562,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0563",
+      "disk_num": 563,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0564",
+      "disk_num": 564,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0565",
+      "disk_num": 565,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0566",
+      "disk_num": 566,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0567",
+      "disk_num": 567,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0568",
+      "disk_num": 568,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0569",
+      "disk_num": 569,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0570",
+      "disk_num": 570,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0571",
+      "disk_num": 571,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0572",
+      "disk_num": 572,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0573",
+      "disk_num": 573,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0574",
+      "disk_num": 574,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0575",
+      "disk_num": 575,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0576",
+      "disk_num": 576,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0577",
+      "disk_num": 577,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0578",
+      "disk_num": 578,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0579",
+      "disk_num": 579,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0580",
+      "disk_num": 580,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0581",
+      "disk_num": 581,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0582",
+      "disk_num": 582,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0583",
+      "disk_num": 583,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0584",
+      "disk_num": 584,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0585",
+      "disk_num": 585,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0586",
+      "disk_num": 586,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0587",
+      "disk_num": 587,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0588",
+      "disk_num": 588,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0589",
+      "disk_num": 589,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0590",
+      "disk_num": 590,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0591",
+      "disk_num": 591,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0592",
+      "disk_num": 592,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0593",
+      "disk_num": 593,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0594",
+      "disk_num": 594,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0595",
+      "disk_num": 595,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0596",
+      "disk_num": 596,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0597",
+      "disk_num": 597,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0598",
+      "disk_num": 598,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0599",
+      "disk_num": 599,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0600",
+      "disk_num": 600,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0601",
+      "disk_num": 601,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0602",
+      "disk_num": 602,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0603",
+      "disk_num": 603,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0604",
+      "disk_num": 604,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0605",
+      "disk_num": 605,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0606",
+      "disk_num": 606,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0607",
+      "disk_num": 607,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0608",
+      "disk_num": 608,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0609",
+      "disk_num": 609,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0610",
+      "disk_num": 610,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0611",
+      "disk_num": 611,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0612",
+      "disk_num": 612,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0613",
+      "disk_num": 613,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0614",
+      "disk_num": 614,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0615",
+      "disk_num": 615,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0616",
+      "disk_num": 616,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0617",
+      "disk_num": 617,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0618",
+      "disk_num": 618,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0619",
+      "disk_num": 619,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0620",
+      "disk_num": 620,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0621",
+      "disk_num": 621,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0622",
+      "disk_num": 622,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0623",
+      "disk_num": 623,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0624",
+      "disk_num": 624,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0625",
+      "disk_num": 625,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0626",
+      "disk_num": 626,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0627",
+      "disk_num": 627,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0628",
+      "disk_num": 628,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0629",
+      "disk_num": 629,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0630",
+      "disk_num": 630,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0631",
+      "disk_num": 631,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0632",
+      "disk_num": 632,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0633",
+      "disk_num": 633,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0634",
+      "disk_num": 634,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0635",
+      "disk_num": 635,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0636",
+      "disk_num": 636,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0637",
+      "disk_num": 637,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0638",
+      "disk_num": 638,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0639",
+      "disk_num": 639,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0640",
+      "disk_num": 640,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0641",
+      "disk_num": 641,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0642",
+      "disk_num": 642,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0643",
+      "disk_num": 643,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0644",
+      "disk_num": 644,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0645",
+      "disk_num": 645,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0646",
+      "disk_num": 646,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0647",
+      "disk_num": 647,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0648",
+      "disk_num": 648,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0649",
+      "disk_num": 649,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0650",
+      "disk_num": 650,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0651",
+      "disk_num": 651,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0652",
+      "disk_num": 652,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0653",
+      "disk_num": 653,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0654",
+      "disk_num": 654,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0655",
+      "disk_num": 655,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0656",
+      "disk_num": 656,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0657",
+      "disk_num": 657,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0658",
+      "disk_num": 658,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0659",
+      "disk_num": 659,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0660",
+      "disk_num": 660,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0661",
+      "disk_num": 661,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0662",
+      "disk_num": 662,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0663",
+      "disk_num": 663,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0664",
+      "disk_num": 664,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0665",
+      "disk_num": 665,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0666",
+      "disk_num": 666,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0667",
+      "disk_num": 667,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0668",
+      "disk_num": 668,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0669",
+      "disk_num": 669,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0670",
+      "disk_num": 670,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0671",
+      "disk_num": 671,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0672",
+      "disk_num": 672,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0673",
+      "disk_num": 673,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0674",
+      "disk_num": 674,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0675",
+      "disk_num": 675,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0676",
+      "disk_num": 676,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0677",
+      "disk_num": 677,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0678",
+      "disk_num": 678,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0679",
+      "disk_num": 679,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0680",
+      "disk_num": 680,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0681",
+      "disk_num": 681,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0682",
+      "disk_num": 682,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0683",
+      "disk_num": 683,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0684",
+      "disk_num": 684,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0685",
+      "disk_num": 685,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0686",
+      "disk_num": 686,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0687",
+      "disk_num": 687,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0688",
+      "disk_num": 688,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0689",
+      "disk_num": 689,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0690",
+      "disk_num": 690,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0691",
+      "disk_num": 691,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0692",
+      "disk_num": 692,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0693",
+      "disk_num": 693,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0694",
+      "disk_num": 694,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0695",
+      "disk_num": 695,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0696",
+      "disk_num": 696,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0697",
+      "disk_num": 697,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0698",
+      "disk_num": 698,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0699",
+      "disk_num": 699,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0700",
+      "disk_num": 700,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0701",
+      "disk_num": 701,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0702",
+      "disk_num": 702,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0703",
+      "disk_num": 703,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0704",
+      "disk_num": 704,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0705",
+      "disk_num": 705,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0706",
+      "disk_num": 706,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0707",
+      "disk_num": 707,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0708",
+      "disk_num": 708,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0709",
+      "disk_num": 709,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0710",
+      "disk_num": 710,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0711",
+      "disk_num": 711,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0712",
+      "disk_num": 712,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0713",
+      "disk_num": 713,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0714",
+      "disk_num": 714,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0715",
+      "disk_num": 715,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0716",
+      "disk_num": 716,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0717",
+      "disk_num": 717,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0718",
+      "disk_num": 718,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0719",
+      "disk_num": 719,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0720",
+      "disk_num": 720,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0721",
+      "disk_num": 721,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0722",
+      "disk_num": 722,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0723",
+      "disk_num": 723,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0724",
+      "disk_num": 724,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0725",
+      "disk_num": 725,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0726",
+      "disk_num": 726,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0727",
+      "disk_num": 727,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0728",
+      "disk_num": 728,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0729",
+      "disk_num": 729,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0730",
+      "disk_num": 730,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0731",
+      "disk_num": 731,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0732",
+      "disk_num": 732,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0733",
+      "disk_num": 733,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0734",
+      "disk_num": 734,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0735",
+      "disk_num": 735,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0736",
+      "disk_num": 736,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0737",
+      "disk_num": 737,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0738",
+      "disk_num": 738,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0739",
+      "disk_num": 739,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0740",
+      "disk_num": 740,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0741",
+      "disk_num": 741,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0742",
+      "disk_num": 742,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0743",
+      "disk_num": 743,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0744",
+      "disk_num": 744,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0745",
+      "disk_num": 745,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0746",
+      "disk_num": 746,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0747",
+      "disk_num": 747,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0748",
+      "disk_num": 748,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0749",
+      "disk_num": 749,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0750",
+      "disk_num": 750,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0751",
+      "disk_num": 751,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0752",
+      "disk_num": 752,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0753",
+      "disk_num": 753,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0754",
+      "disk_num": 754,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0755",
+      "disk_num": 755,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0756",
+      "disk_num": 756,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0757",
+      "disk_num": 757,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0758",
+      "disk_num": 758,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0759",
+      "disk_num": 759,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0760",
+      "disk_num": 760,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0761",
+      "disk_num": 761,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0762",
+      "disk_num": 762,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0763",
+      "disk_num": 763,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0764",
+      "disk_num": 764,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0765",
+      "disk_num": 765,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0766",
+      "disk_num": 766,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0767",
+      "disk_num": 767,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0768",
+      "disk_num": 768,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0769",
+      "disk_num": 769,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0770",
+      "disk_num": 770,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0771",
+      "disk_num": 771,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0772",
+      "disk_num": 772,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0773",
+      "disk_num": 773,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0774",
+      "disk_num": 774,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0775",
+      "disk_num": 775,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0776",
+      "disk_num": 776,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0777",
+      "disk_num": 777,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0778",
+      "disk_num": 778,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0779",
+      "disk_num": 779,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0780",
+      "disk_num": 780,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0781",
+      "disk_num": 781,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0782",
+      "disk_num": 782,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0783",
+      "disk_num": 783,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0784",
+      "disk_num": 784,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0785",
+      "disk_num": 785,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0786",
+      "disk_num": 786,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0787",
+      "disk_num": 787,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0788",
+      "disk_num": 788,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0789",
+      "disk_num": 789,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0790",
+      "disk_num": 790,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0791",
+      "disk_num": 791,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0792",
+      "disk_num": 792,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0793",
+      "disk_num": 793,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0794",
+      "disk_num": 794,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0795",
+      "disk_num": 795,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0796",
+      "disk_num": 796,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0797",
+      "disk_num": 797,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0798",
+      "disk_num": 798,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0799",
+      "disk_num": 799,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0800",
+      "disk_num": 800,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0801",
+      "disk_num": 801,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0802",
+      "disk_num": 802,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0803",
+      "disk_num": 803,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0804",
+      "disk_num": 804,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0805",
+      "disk_num": 805,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0806",
+      "disk_num": 806,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0807",
+      "disk_num": 807,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0808",
+      "disk_num": 808,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0809",
+      "disk_num": 809,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0810",
+      "disk_num": 810,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0811",
+      "disk_num": 811,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0812",
+      "disk_num": 812,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0813",
+      "disk_num": 813,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0814",
+      "disk_num": 814,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0815",
+      "disk_num": 815,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0816",
+      "disk_num": 816,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0817",
+      "disk_num": 817,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0818",
+      "disk_num": 818,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0819",
+      "disk_num": 819,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0820",
+      "disk_num": 820,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0821",
+      "disk_num": 821,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0822",
+      "disk_num": 822,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0823",
+      "disk_num": 823,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0824",
+      "disk_num": 824,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0825",
+      "disk_num": 825,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0826",
+      "disk_num": 826,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0827",
+      "disk_num": 827,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0828",
+      "disk_num": 828,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0829",
+      "disk_num": 829,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0830",
+      "disk_num": 830,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0831",
+      "disk_num": 831,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0832",
+      "disk_num": 832,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0833",
+      "disk_num": 833,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0834",
+      "disk_num": 834,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0835",
+      "disk_num": 835,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0836",
+      "disk_num": 836,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0837",
+      "disk_num": 837,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0838",
+      "disk_num": 838,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0839",
+      "disk_num": 839,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0840",
+      "disk_num": 840,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0841",
+      "disk_num": 841,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0842",
+      "disk_num": 842,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0843",
+      "disk_num": 843,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0844",
+      "disk_num": 844,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0845",
+      "disk_num": 845,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0846",
+      "disk_num": 846,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0847",
+      "disk_num": 847,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0848",
+      "disk_num": 848,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0849",
+      "disk_num": 849,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0850",
+      "disk_num": 850,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0851",
+      "disk_num": 851,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0852",
+      "disk_num": 852,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0853",
+      "disk_num": 853,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0854",
+      "disk_num": 854,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0855",
+      "disk_num": 855,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0856",
+      "disk_num": 856,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0857",
+      "disk_num": 857,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0858",
+      "disk_num": 858,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0859",
+      "disk_num": 859,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0860",
+      "disk_num": 860,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0861",
+      "disk_num": 861,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0862",
+      "disk_num": 862,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0863",
+      "disk_num": 863,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0864",
+      "disk_num": 864,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0865",
+      "disk_num": 865,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0866",
+      "disk_num": 866,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0867",
+      "disk_num": 867,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0868",
+      "disk_num": 868,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0869",
+      "disk_num": 869,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0870",
+      "disk_num": 870,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0871",
+      "disk_num": 871,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0872",
+      "disk_num": 872,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0873",
+      "disk_num": 873,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0874",
+      "disk_num": 874,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0875",
+      "disk_num": 875,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0876",
+      "disk_num": 876,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0877",
+      "disk_num": 877,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0878",
+      "disk_num": 878,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0879",
+      "disk_num": 879,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0880",
+      "disk_num": 880,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0881",
+      "disk_num": 881,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0882",
+      "disk_num": 882,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0883",
+      "disk_num": 883,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0884",
+      "disk_num": 884,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0885",
+      "disk_num": 885,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0886",
+      "disk_num": 886,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0887",
+      "disk_num": 887,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0888",
+      "disk_num": 888,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0889",
+      "disk_num": 889,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0890",
+      "disk_num": 890,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0891",
+      "disk_num": 891,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0892",
+      "disk_num": 892,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0893",
+      "disk_num": 893,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0894",
+      "disk_num": 894,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0895",
+      "disk_num": 895,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0896",
+      "disk_num": 896,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0897",
+      "disk_num": 897,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0898",
+      "disk_num": 898,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0899",
+      "disk_num": 899,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0900",
+      "disk_num": 900,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0901",
+      "disk_num": 901,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0902",
+      "disk_num": 902,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0903",
+      "disk_num": 903,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0904",
+      "disk_num": 904,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0905",
+      "disk_num": 905,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0906",
+      "disk_num": 906,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0907",
+      "disk_num": 907,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0908",
+      "disk_num": 908,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0909",
+      "disk_num": 909,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0910",
+      "disk_num": 910,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0911",
+      "disk_num": 911,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0912",
+      "disk_num": 912,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0913",
+      "disk_num": 913,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0914",
+      "disk_num": 914,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0915",
+      "disk_num": 915,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0916",
+      "disk_num": 916,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0917",
+      "disk_num": 917,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0918",
+      "disk_num": 918,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0919",
+      "disk_num": 919,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0920",
+      "disk_num": 920,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0921",
+      "disk_num": 921,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0922",
+      "disk_num": 922,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0923",
+      "disk_num": 923,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0924",
+      "disk_num": 924,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0925",
+      "disk_num": 925,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0926",
+      "disk_num": 926,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0927",
+      "disk_num": 927,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0928",
+      "disk_num": 928,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0929",
+      "disk_num": 929,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0930",
+      "disk_num": 930,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0931",
+      "disk_num": 931,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0932",
+      "disk_num": 932,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0933",
+      "disk_num": 933,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0934",
+      "disk_num": 934,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0935",
+      "disk_num": 935,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0936",
+      "disk_num": 936,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0937",
+      "disk_num": 937,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0938",
+      "disk_num": 938,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0939",
+      "disk_num": 939,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0940",
+      "disk_num": 940,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0941",
+      "disk_num": 941,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0942",
+      "disk_num": 942,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0943",
+      "disk_num": 943,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0944",
+      "disk_num": 944,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0945",
+      "disk_num": 945,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0946",
+      "disk_num": 946,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0947",
+      "disk_num": 947,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0948",
+      "disk_num": 948,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0949",
+      "disk_num": 949,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0950",
+      "disk_num": 950,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0951",
+      "disk_num": 951,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0952",
+      "disk_num": 952,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0953",
+      "disk_num": 953,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0954",
+      "disk_num": 954,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0955",
+      "disk_num": 955,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0956",
+      "disk_num": 956,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0957",
+      "disk_num": 957,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0958",
+      "disk_num": 958,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0959",
+      "disk_num": 959,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0960",
+      "disk_num": 960,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0961",
+      "disk_num": 961,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0962",
+      "disk_num": 962,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0963",
+      "disk_num": 963,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0964",
+      "disk_num": 964,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0965",
+      "disk_num": 965,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0966",
+      "disk_num": 966,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0967",
+      "disk_num": 967,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0968",
+      "disk_num": 968,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0969",
+      "disk_num": 969,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0970",
+      "disk_num": 970,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0971",
+      "disk_num": 971,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0972",
+      "disk_num": 972,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0973",
+      "disk_num": 973,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0974",
+      "disk_num": 974,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0975",
+      "disk_num": 975,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0976",
+      "disk_num": 976,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0977",
+      "disk_num": 977,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0978",
+      "disk_num": 978,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0979",
+      "disk_num": 979,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0980",
+      "disk_num": 980,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0981",
+      "disk_num": 981,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0982",
+      "disk_num": 982,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0983",
+      "disk_num": 983,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0984",
+      "disk_num": 984,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0985",
+      "disk_num": 985,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0986",
+      "disk_num": 986,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0987",
+      "disk_num": 987,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0988",
+      "disk_num": 988,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0989",
+      "disk_num": 989,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0990",
+      "disk_num": 990,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0991",
+      "disk_num": 991,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0992",
+      "disk_num": 992,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0993",
+      "disk_num": 993,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0994",
+      "disk_num": 994,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0995",
+      "disk_num": 995,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0996",
+      "disk_num": 996,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0997",
+      "disk_num": 997,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0998",
+      "disk_num": 998,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-0999",
+      "disk_num": 999,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    },
+    {
+      "disk_name": "batch-1000",
+      "disk_num": 1000,
+      "success": false,
+      "error": "SmartDiskCreator.__init__() missing 3 required positional arguments: 'username', 'password', and 'url'"
+    }
+  ]
+}

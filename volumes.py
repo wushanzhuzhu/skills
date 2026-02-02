@@ -65,7 +65,7 @@ class Volumes:
         url = f"{self.audit.base_url}/api/resource/listDisk"
         payload = {"name":name}
         print("Volumes getDiskbyName payload:", payload)
-        response = self.audit.session.post()
+        response = self.audit.session.post(url, json=payload, verify=False)
         return response.json().get("data",[])
     
     def getDiskbyName_exact(self,name: str) -> dict:
@@ -81,12 +81,24 @@ class Volumes:
         url = f"{self.audit.base_url}/api/resource/listDisk"
         payload = {"name":name}
         print("Volumes getDiskbyName payload:", payload)
-        response = self.audit.session.post()
+        response = self.audit.session.post(url, json=payload, verify=False)
         disks = response.json().get("data",[])
-        for disk in disks:
-            if disk.get("name") == name:
-                disk = disk
-        return disk
+        for disk_item in disks:
+            if disk_item.get("name") == name:
+                return disk_item
+        return {}
+    
+    def listAllDisks(self) -> list:
+        """
+        调用archeross平台API查询所有虚拟磁盘
+        :return: 查询成功返回虚拟磁盘信息列表，查询失败返回空列表
+        """
+        url = f"{self.audit.base_url}/api/resource/listDisk"
+        payload = {}  # 空载荷获取所有磁盘
+        print("Volumes listAllDisks payload:", payload)
+        response = self.audit.session.post(url, json=payload, verify=False)
+        print("Volumes listAllDisks response:", response.json())
+        return response.json().get("data", [])
     
 
 if __name__ == "__main__":

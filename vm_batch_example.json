@@ -1,0 +1,43 @@
+{
+  "environment": "production",
+  "description": "Web应用集群配置示例",
+  "vms": [
+    {
+      "name": "web-frontend-01",
+      "template": "web_server",
+      "use_case": "web",
+      "overrides": {
+        "cpu": 4,
+        "memory": 8,
+        "size": 100,
+        "vmActive": true,
+        "haEnable": true
+      }
+    },
+    {
+      "name": "web-backend-01",
+      "template": "web_server",
+      "use_case": "web",
+      "overrides": {
+        "cpu": 6,
+        "memory": 12,
+        "size": 150,
+        "vmActive": true,
+        "haEnable": true
+      }
+    },
+    {
+      "name": "database-01",
+      "template": "database",
+      "use_case": "database",
+      "overrides": {
+        "cpu": 8,
+        "memory": 16,
+        "size": 200,
+        "vmActive": true,
+        "haEnable": true,
+        "bigPageEnable": true
+      }
+    }
+  ]
+}

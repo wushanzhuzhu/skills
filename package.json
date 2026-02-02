@@ -1,0 +1,15 @@
+{
+  "name": "mcp-demo-server",
+  "version": "1.0.0",
+  "description": "Simple MCP server demo for OpenCode",
+  "main": "mcp-demo-server.js",
+  "scripts": {
+    "start": "node mcp-demo-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "keywords": ["mcp", "server", "demo"],
+  "author": "",
+  "license": "MIT"
+}
