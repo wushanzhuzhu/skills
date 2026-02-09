@@ -1,4 +1,14 @@
 import paramiko
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import time
 def ssh_execute_command(hostname, port, username, key_path, command):
     """通过SSH密钥执行远程命令
@@ -29,20 +39,20 @@ def ssh_execute_command(hostname, port, username, key_path, command):
         stdin, stdout, stderr = ssh.exec_command(command,get_pty=True)
         output = stdout.read().decode('utf-8')
         error = stderr.read().decode('utf-8')
-        print("命令输出:")
-        print(output or "无输出")
+        logger.info("命令输出:")
+        logger.info(output or "无输出")
         result = output
 
         if error:
-            print("错误信息:")
-            print(error)
+            logger.info("错误信息:")
+            logger.info(error)
 
     except paramiko.AuthenticationException:
-        print("认证失败：请检查密钥路径和服务器配置")
+        logger.info("认证失败：请检查密钥路径和服务器配置")
     except paramiko.SSHException as e:
-        print(f"SSH连接异常: {str(e)}")
+        logger.info(f"SSH连接异常: {str(e)}")
     except Exception as e:
-        print(f"执行异常: {str(e)}")
+        logger.info(f"执行异常: {str(e)}")
     finally:
         ssh.close()
     return result

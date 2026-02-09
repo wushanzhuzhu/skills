@@ -37,5 +37,18 @@
       "开发"
     ],
     "storage_backend": "local"
+  },
+  "langchao": {
+    "name": "浪潮5代繁体版环境",
+    "url": "https://172.118.34.100",
+    "username": "admin",
+    "password": "Admin@123",
+    "description": "浪潮5代繁体版环境",
+    "tags": [
+      "浪潮",
+      "繁体版",
+      "5代"
+    ],
+    "storage_backend": "iscsi"
   }
 }

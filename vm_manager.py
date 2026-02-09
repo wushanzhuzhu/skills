@@ -5,6 +5,16 @@
 """
 
 import sys
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import os
 import json
 import time
@@ -30,19 +40,19 @@ class VMManager:
         environments = self.env_manager.list_environments()
         
         if not environments:
-            print("❌ 没有配置的环境")
+            logger.error("❌ 没有配置的环境")
             return None
         
-        print("\n🌐 可用环境列表:")
-        print("=" * 70)
-        print(f"{'序号':<4} {'环境ID':<12} {'名称':<15} {'地址':<25} {'描述':<20}")
-        print("-" * 70)
+        logger.info("\n🌐 可用环境列表:")
+        logger.info("=" * 70)
+        logger.info(f"{'序号':<4} {'环境ID':<12} {'名称':<15} {'地址':<25} {'描述':<20}")
+        logger.info("-" * 70)
         
         for i, env in enumerate(environments, 1):
-            print(f"{i:<4} {env['id']:<12} {env['name']:<15} "
+            logger.info(f"{i:<4} {env['id']:<12} {env['name']:<15} "
                   f"{env['url']:<25} {env['description'][:18]:<20}")
         
-        print("=" * 70)
+        logger.info("=" * 70)
         
         while True:
             try:
@@ -60,10 +70,10 @@ class VMManager:
                     if env['id'] == choice:
                         return env['id']
                 
-                print("❌ 无效选择，请重新输入")
+                logger.error("❌ 无效选择，请重新输入")
                 
             except KeyboardInterrupt:
-                print("\n👋 操作已取消")
+                logger.info("\n👋 操作已取消")
                 return None
     
     def auto_select_environment(self, env_hint: str = None) -> str:
@@ -79,10 +89,10 @@ class VMManager:
         if len(results) == 1:
             return results[0]['id']
         elif len(results) > 1:
-            print(f"🔍 找到 {len(results)} 个匹配环境，请手动选择:")
+            logger.info(f"🔍 找到 {len(results)} 个匹配环境，请手动选择:")
             return self.select_environment_interactive()
         else:
-            print(f"❌ 没有找到匹配 '{env_hint}' 的环境")
+            logger.error(f"❌ 没有找到匹配 '{env_hint}' 的环境")
             return self.select_environment_interactive()
     
     def check_environment(self, env_id: str) -> bool:
@@ -90,11 +100,11 @@ class VMManager:
         self.connection_info = self.env_manager.get_connection_info(env_id)
         
         if not self.connection_info:
-            print(f"❌ 环境不存在: {env_id}")
+            logger.error(f"❌ 环境不存在: {env_id}")
             return False
         
-        print(f"🔗 正在连接环境: {self.connection_info['name']}")
-        print(f"📡 地址: {self.connection_info['url']}")
+        logger.info(f"🔗 正在连接环境: {self.connection_info['name']}")
+        logger.info(f"📡 地址: {self.connection_info['url']}")
         
         # 测试连接
         try:
@@ -109,7 +119,7 @@ class VMManager:
             )
             
             if audit.setSession():
-                print(f"✅ 环境连接成功: {self.connection_info['name']}")
+                logger.info(f"✅ 环境连接成功: {self.connection_info['name']}")
                 self.current_env = env_id
                 
                 # 初始化管理器
@@ -132,33 +142,33 @@ class VMManager:
                 
                 return True
             else:
-                print(f"❌ 环境连接失败: {self.connection_info['name']}")
+                logger.error(f"❌ 环境连接失败: {self.connection_info['name']}")
                 return False
                 
         except Exception as e:
-            print(f"❌ 连接测试失败: {e}")
+            logger.error(f"❌ 连接测试失败: {e}")
             return False
     
     def discover_resources(self):
         """发现可用资源"""
-        print("\n🔍 资源发现结果:")
-        print("=" * 50)
+        logger.info("\n🔍 资源发现结果:")
+        logger.info("=" * 50)
         
         # 存储信息
         if self.storage_info:
-            print(f"💾 可用存储: {len(self.storage_info)} 个")
+            logger.info(f"💾 可用存储: {len(self.storage_info)} 个")
             for i, storage in enumerate(self.storage_info[:3], 1):  # 显示前3个
-                print(f"   {i}. {storage.get('stackName')} - {storage.get('storageBackend')}")
+                logger.info(f"   {i}. {storage.get('stackName')} - {storage.get('storageBackend')}")
         else:
-            print("❌ 未发现存储资源")
+            logger.error("❌ 未发现存储资源")
         
         # 镜像信息
         if self.available_images:
-            print(f"🖼️ 可用镜像: {len(self.available_images)} 个")
+            logger.info(f"🖼️ 可用镜像: {len(self.available_images)} 个")
             for i, image in enumerate(self.available_images[:3], 1):  # 显示前3个
-                print(f"   {i}. {image.get('imageName')} - {image.get('imageId')[:8]}...")
+                logger.info(f"   {i}. {image.get('imageName')} - {image.get('imageId')[:8]}...")
         else:
-            print("❌ 未发现可用镜像")
+            logger.error("❌ 未发现可用镜像")
         
         return bool(self.storage_info and self.available_images)
     
@@ -217,10 +227,10 @@ class VMManager:
         image_recs = self.get_image_recommendations(use_case)
         if image_recs:
             config["imageId"] = image_recs[0].get('imageId')
-            print(f"🖼️ 推荐镜像: {image_recs[0].get('imageName')}")
+            logger.info(f"🖼️ 推荐镜像: {image_recs[0].get('imageName')}")
         else:
             config["imageId"] = self.available_images[0].get('imageId') if self.available_images else ""
-            print(f"🖼️ 使用镜像: {self.available_images[0].get('imageName') if self.available_images else '无'}")
+            logger.info(f"🖼️ 使用镜像: {self.available_images[0].get('imageName') if self.available_images else '无'}")
         
         # 设置管理员密码（如果未提供）
         if not config.get("adminPassword"):
@@ -276,7 +286,7 @@ class VMManager:
                 audit=audit
             )
             
-            print(f"🚀 正在创建VM: {config['name']}")
+            logger.info(f"🚀 正在创建VM: {config['name']}")
             
             # 调用创建API
             vm_ids = instances.createInstance_noNet(**config)
@@ -298,8 +308,8 @@ class VMManager:
                         use_case: str = "general", custom_overrides: Dict = None) -> Dict:
         """批量创建VM"""
         
-        print(f"🔥 开始批量创建 {vm_count} 个VM (模板: {template_name})")
-        print("=" * 60)
+        logger.info(f"🔥 开始批量创建 {vm_count} 个VM (模板: {template_name})")
+        logger.info("=" * 60)
         
         results = {
             "total": vm_count,
@@ -309,7 +319,7 @@ class VMManager:
         }
         
         for i in range(1, vm_count + 1):
-            print(f"\n📁 创建第 {i}/{vm_count} 个VM...")
+            logger.info(f"\n📁 创建第 {i}/{vm_count} 个VM...")
             
             try:
                 # 准备配置
@@ -326,7 +336,7 @@ class VMManager:
                         "vm_name": config["name"],
                         "error": error_msg
                     })
-                    print(f"❌ 第 {i} 个VM配置验证失败")
+                    logger.error(f"❌ 第 {i} 个VM配置验证失败")
                     continue
                 
                 # 创建VM
@@ -338,18 +348,18 @@ class VMManager:
                         "vm_id": result["vm_id"],
                         "vm_name": result["vm_name"]
                     })
-                    print(f"✅ 第 {i} 个VM创建成功: {result['vm_name']}")
+                    logger.info(f"✅ 第 {i} 个VM创建成功: {result['vm_name']}")
                 else:
                     results["failed"].append({
                         "vm_num": i,
                         "vm_name": config["name"],
                         "error": result["error"]
                     })
-                    print(f"❌ 第 {i} 个VM创建失败: {result['error']}")
+                    logger.error(f"❌ 第 {i} 个VM创建失败: {result['error']}")
                 
                 # 添加延迟避免API频率限制
                 if i < vm_count:
-                    print("⏳ 等待3秒后继续...")
+                    logger.info("⏳ 等待3秒后继续...")
                     time.sleep(3)
                     
             except Exception as e:
@@ -358,7 +368,7 @@ class VMManager:
                     "vm_name": f"vm-{i}",
                     "error": str(e)
                 })
-                print(f"❌ 第 {i} 个VM创建出错: {e}")
+                logger.error(f"❌ 第 {i} 个VM创建出错: {e}")
         
         results["end_time"] = time.time()
         results["duration"] = results["end_time"] - results["start_time"]
@@ -367,40 +377,40 @@ class VMManager:
     
     def generate_batch_report(self, results: Dict) -> Dict:
         """生成批量创建报告"""
-        print("\n" + "=" * 60)
-        print("📊 批量VM创建结果汇总")
-        print("=" * 60)
+        logger.info("\n" + "=" * 60)
+        logger.info("📊 批量VM创建结果汇总")
+        logger.info("=" * 60)
         
         success_count = len(results["success"])
         failed_count = len(results["failed"])
         
-        print(f"✅ 成功创建: {success_count}/{results['total']}")
-        print(f"❌ 创建失败: {failed_count}/{results['total']}")
-        print(f"📈 成功率: {success_count/results['total']*100:.1f}%")
-        print(f"⏱️ 总耗时: {results['duration']:.1f}秒")
-        print(f"🌐 目标环境: {self.connection_info['name']}")
+        logger.info(f"✅ 成功创建: {success_count}/{results['total']}")
+        logger.error(f"❌ 创建失败: {failed_count}/{results['total']}")
+        logger.info(f"📈 成功率: {success_count/results['total']*100:.1f}%")
+        logger.info(f"⏱️ 总耗时: {results['duration']:.1f}秒")
+        logger.info(f"🌐 目标环境: {self.connection_info['name']}")
         
         # 成功的VM列表
         if results["success"]:
-            print(f"\n✅ 成功创建的VM:")
+            logger.info(f"\n✅ 成功创建的VM:")
             for vm in results["success"]:
-                print(f"   {vm['vm_num']}. {vm['vm_name']} (ID: {vm['vm_id'][:8]}...)")
+                logger.info(f"   {vm['vm_num']}. {vm['vm_name']} (ID: {vm['vm_id'][:8]}...)")
         
         # 失败的VM列表
         if results["failed"]:
-            print(f"\n❌ 失败的VM:")
+            logger.info(f"\n❌ 失败的VM:")
             for vm in results["failed"]:
-                print(f"   {vm['vm_num']}. {vm['vm_name']}: {vm['error']}")
+                logger.info(f"   {vm['vm_num']}. {vm['vm_name']}: {vm['error']}")
         
         # 资源统计
         if results["success"]:
             cpu_total = len(results["success"]) * 2  # 假设每个VM 2核
             memory_total = len(results["success"]) * 4  # 假设每个VM 4GB
-            print(f"\n💾 资源统计:")
-            print(f"   总CPU: {cpu_total} 核")
-            print(f"   总内存: {memory_total} GB")
+            logger.info(f"\n💾 资源统计:")
+            logger.info(f"   总CPU: {cpu_total} 核")
+            logger.info(f"   总内存: {memory_total} GB")
         
-        print("\n🎉 批量创建任务完成!")
+        logger.info("\n🎉 批量创建任务完成!")
         return results
     
     def get_vm_info(self, vm_id: str) -> Dict:
@@ -457,7 +467,7 @@ class VMManager:
                 return False
                 
         except Exception as e:
-            print(f"❌ 删除VM失败: {e}")
+            logger.error(f"❌ 删除VM失败: {e}")
             return False
 
 def main():
@@ -467,21 +477,21 @@ def main():
     manager = VMManager()
     
     if len(sys.argv) < 2:
-        print("🔧 智能VM管理器")
-        print("python vm_manager.py [命令] [参数]")
-        print("\n命令:")
-        print("  create <template> <count> [env_hint]  - 批量创建VM")
-        print("  single <template> [env_hint]        - 创建单个VM")
-        print("  env-list                           - 列出环境")
-        print("  templates                          - 列出模板")
-        print("  images <env_id>                     - 列出镜像")
+        logger.info("🔧 智能VM管理器")
+        logger.info("python vm_manager.py [命令] [参数]")
+        logger.info("\n命令:")
+        logger.info("  create <template> <count> [env_hint]  - 批量创建VM")
+        logger.info("  single <template> [env_hint]        - 创建单个VM")
+        logger.info("  env-list                           - 列出环境")
+        logger.info("  templates                          - 列出模板")
+        logger.info("  images <env_id>                     - 列出镜像")
         return
     
     command = sys.argv[1]
     
     if command == "create":
         if len(sys.argv) < 4:
-            print("❌ 请提供模板名称和VM数量")
+            logger.error("❌ 请提供模板名称和VM数量")
             return
         
         template = sys.argv[2]
@@ -495,12 +505,12 @@ def main():
             env_id = manager.select_environment_interactive()
         
         if not env_id or not manager.check_environment(env_id):
-            print("❌ 环境选择或连接失败")
+            logger.error("❌ 环境选择或连接失败")
             return
         
         # 资源发现
         if not manager.discover_resources():
-            print("❌ 资源发现失败")
+            logger.error("❌ 资源发现失败")
             return
         
         # 批量创建
@@ -508,14 +518,14 @@ def main():
         
     elif command == "single":
         if len(sys.argv) < 3:
-            print("❌ 请提供模板名称")
+            logger.error("❌ 请提供模板名称")
             return
         
         template = sys.argv[2]
         env_hint = sys.argv[3] if len(sys.argv) > 3 else None
         
         # 环境选择和创建逻辑类似...
-        print("单个VM创建功能待实现")
+        logger.info("单个VM创建功能待实现")
         
     elif command == "env-list":
         manager.env_manager.display_environments_table()
@@ -525,7 +535,7 @@ def main():
         
     elif command == "images":
         if len(sys.argv) < 3:
-            print("❌ 请提供环境ID")
+            logger.error("❌ 请提供环境ID")
             return
         
         env_id = sys.argv[2]
@@ -533,7 +543,7 @@ def main():
             manager.discover_resources()
     
     else:
-        print(f"❌ 未知命令: {command}")
+        logger.error(f"❌ 未知命令: {command}")
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,14 @@
 import pymysql
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 from dbutils.pooled_db import PooledDB
 from contextlib import contextmanager
 
@@ -98,14 +108,14 @@ class MySQLClient:
         sql = f"SELECT {fields} FROM `{table}`"
         if condition:
             sql += f" WHERE {condition}"
-        print("MySQLClient sql: ", sql)
+        logger.info("MySQLClient sql: ", sql)
         return self.execute(sql, database=database)
     
     def query_simple(self, sql, database=None):
         """
         直接使用SELECT语句查询数据
         """
-        print("MySQLClient sql: ", sql)
+        logger.info("MySQLClient sql: ", sql)
         if not database: 
             return "请指定数据库"
         return self.execute(sql, database=database)
@@ -131,4 +141,4 @@ if __name__ == "__main__":
         port=3306
     )
     #查询示例
-    print(db2.query('virtual_machine',"name='wushan123'",database='xu_resource'))
+    logger.info(db2.query('virtual_machine',"name='wushan123'",database='xu_resource'))

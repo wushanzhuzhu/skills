@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-02-04T08:12:06.677114",
+  "environment": "dummy",
+  "username": "admin",
+  "configuration": {
+    "size": 50,
+    "count": 2,
+    "name_prefix": "test-db",
+    "template": "database"
+  },
+  "result": {
+    "success": true,
+    "message": "模拟skill调用成功",
+    "params": {
+      "env_url": "dummy",
+      "username": "admin",
+      "password": "Admin@123",
+      "size": 50,
+      "count": 2,
+      "name_prefix": "test-db",
+      "template": "database"
+    },
+    "created_disks": [
+      {
+        "name": "test-db-000",
+        "size": 50,
+        "template": "database"
+      },
+      {
+        "name": "test-db-001",
+        "size": 50,
+        "template": "database"
+      }
+    ]
+  }
+}

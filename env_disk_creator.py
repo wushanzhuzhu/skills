@@ -1,3 +1,11 @@
+import logging
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
 #!/usr/bin/env python3
 """
 智能环境感知磁盘创建器
@@ -22,19 +30,19 @@ class EnvironmentAwareDiskCreator:
         environments = self.env_manager.list_environments()
         
         if not environments:
-            print("❌ 没有配置的环境，请先添加环境")
+            logger.error("❌ 没有配置的环境，请先添加环境")
             return None
         
-        print("\n🌐 可用环境列表:")
-        print("=" * 70)
-        print(f"{'序号':<4} {'环境ID':<12} {'名称':<15} {'地址':<25} {'描述':<20}")
-        print("-" * 70)
+        logger.info("\n🌐 可用环境列表:")
+        logger.info("=" * 70)
+        logger.info(f"{'序号':<4} {'环境ID':<12} {'名称':<15} {'地址':<25} {'描述':<20}")
+        logger.info("-" * 70)
         
         for i, env in enumerate(environments, 1):
-            print(f"{i:<4} {env['id']:<12} {env['name']:<15} "
+            logger.info(f"{i:<4} {env['id']:<12} {env['name']:<15} "
                   f"{env['url']:<25} {env['description'][:18]:<20}")
         
-        print("=" * 70)
+        logger.info("=" * 70)
         
         while True:
             try:
@@ -52,10 +60,10 @@ class EnvironmentAwareDiskCreator:
                     if env['id'] == choice:
                         return env['id']
                 
-                print("❌ 无效选择，请重新输入")
+                logger.error("❌ 无效选择，请重新输入")
                 
             except KeyboardInterrupt:
-                print("\n👋 操作已取消")
+                logger.info("\n👋 操作已取消")
                 return None
     
     def auto_select_environment(self, env_hint: str = None) -> str:
@@ -74,10 +82,10 @@ class EnvironmentAwareDiskCreator:
         if len(results) == 1:
             return results[0]['id']
         elif len(results) > 1:
-            print(f"🔍 找到 {len(results)} 个匹配环境，请手动选择:")
+            logger.info(f"🔍 找到 {len(results)} 个匹配环境，请手动选择:")
             return self.select_environment_interactive()
         else:
-            print(f"❌ 没有找到匹配 '{env_hint}' 的环境")
+            logger.error(f"❌ 没有找到匹配 '{env_hint}' 的环境")
             return self.select_environment_interactive()
     
     def check_environment(self, env_id: str) -> bool:
@@ -85,11 +93,11 @@ class EnvironmentAwareDiskCreator:
         self.connection_info = self.env_manager.get_connection_info(env_id)
         
         if not self.connection_info:
-            print(f"❌ 环境不存在: {env_id}")
+            logger.error(f"❌ 环境不存在: {env_id}")
             return False
         
-        print(f"🔗 正在连接环境: {self.connection_info['name']}")
-        print(f"📡 地址: {self.connection_info['url']}")
+        logger.info(f"🔗 正在连接环境: {self.connection_info['name']}")
+        logger.info(f"📡 地址: {self.connection_info['url']}")
         
         # 测试连接
         try:
@@ -102,15 +110,15 @@ class EnvironmentAwareDiskCreator:
             )
             
             if audit.setSession():
-                print(f"✅ 环境连接成功: {self.connection_info['name']}")
+                logger.info(f"✅ 环境连接成功: {self.connection_info['name']}")
                 self.current_env = env_id
                 return True
             else:
-                print(f"❌ 环境连接失败: {self.connection_info['name']}")
+                logger.error(f"❌ 环境连接失败: {self.connection_info['name']}")
                 return False
                 
         except Exception as e:
-            print(f"❌ 连接测试失败: {e}")
+            logger.error(f"❌ 连接测试失败: {e}")
             return False
     
     def create_disk_with_env_selection(self, disk_size_gb: int, 
@@ -118,27 +126,27 @@ class EnvironmentAwareDiskCreator:
                                      env_hint: str = None):
         """带环境选择的磁盘创建"""
         
-        print("🎯 智能磁盘创建器 (环境感知版)")
-        print("=" * 50)
+        logger.info("🎯 智能磁盘创建器 (环境感知版)")
+        logger.info("=" * 50)
         
         # 1. 环境选择
         if env_hint:
-            print(f"🔍 搜索匹配环境: {env_hint}")
+            logger.info(f"🔍 搜索匹配环境: {env_hint}")
             env_id = self.auto_select_environment(env_hint)
         else:
-            print("📋 请选择目标环境:")
+            logger.info("📋 请选择目标环境:")
             env_id = self.select_environment_interactive()
         
         if not env_id:
-            print("❌ 未选择环境，操作取消")
+            logger.error("❌ 未选择环境，操作取消")
             return False
         
         # 2. 环境验证
         if not self.check_environment(env_id):
-            print("💡 建议检查:")
-            print("   • 网络连接是否正常")
-            print("   • 用户名密码是否正确") 
-            print("   • 环境地址是否可访问")
+            logger.info("💡 建议检查:")
+            logger.info("   • 网络连接是否正常")
+            logger.info("   • 用户名密码是否正确") 
+            logger.info("   • 环境地址是否可访问")
             return False
         
         # 3. 使用智能磁盘创建器
@@ -151,25 +159,25 @@ class EnvironmentAwareDiskCreator:
                 self.connection_info['url']
             )
             
-            print(f"\n🚀 在环境 '{self.connection_info['name']}' 中创建磁盘...")
+            logger.info(f"\n🚀 在环境 '{self.connection_info['name']}' 中创建磁盘...")
             success = creator.create_disk_smart(disk_size_gb, use_case)
             
             if success:
-                print(f"\n🎉 磁盘在环境 '{self.connection_info['name']}' 中创建成功!")
-                print(f"🌐 环境地址: {self.connection_info['url']}")
+                logger.info(f"\n🎉 磁盘在环境 '{self.connection_info['name']}' 中创建成功!")
+                logger.info(f"🌐 环境地址: {self.connection_info['url']}")
             else:
-                print(f"\n💥 在环境 '{self.connection_info['name']}' 中创建失败")
+                logger.info(f"\n💥 在环境 '{self.connection_info['name']}' 中创建失败")
             
             return success
             
         except Exception as e:
-            print(f"❌ 创建过程发生错误: {e}")
+            logger.error(f"❌ 创建过程发生错误: {e}")
             return False
     
     def quick_create_batch_disks(self, disk_config: list):
         """批量创建磁盘"""
-        print("🔥 批量磁盘创建模式")
-        print("=" * 50)
+        logger.info("🔥 批量磁盘创建模式")
+        logger.info("=" * 50)
         
         # 选择环境
         env_id = self.select_environment_interactive()
@@ -179,7 +187,7 @@ class EnvironmentAwareDiskCreator:
         results = []
         
         for i, config in enumerate(disk_config, 1):
-            print(f"\n📁 创建第 {i}/{len(disk_config)} 个磁盘...")
+            logger.info(f"\n📁 创建第 {i}/{len(disk_config)} 个磁盘...")
             success = self.create_disk_with_env_selection(
                 config.get('size', 10),
                 config.get('use_case', 'standard'),
@@ -193,15 +201,15 @@ class EnvironmentAwareDiskCreator:
             })
         
         # 显示批量结果
-        print("\n📊 批量创建结果:")
-        print("=" * 60)
+        logger.info("\n📊 批量创建结果:")
+        logger.info("=" * 60)
         success_count = sum(1 for r in results if r['success'])
-        print(f"✅ 成功: {success_count}/{len(results)}")
-        print(f"❌ 失败: {len(results) - success_count}/{len(results)}")
+        logger.info(f"✅ 成功: {success_count}/{len(results)}")
+        logger.error(f"❌ 失败: {len(results) - success_count}/{len(results)}")
         
         for result in results:
             status = "✅" if result['success'] else "❌"
-            print(f"  {status} 磁盘 {result['disk_num']}: "
+            logger.info(f"  {status} 磁盘 {result['disk_num']}: "
                   f"{result['size']}GB @ {result['environment']}")
 
 def main():
@@ -211,21 +219,21 @@ def main():
     creator = EnvironmentAwareDiskCreator()
     
     if len(sys.argv) < 2:
-        print("🔧 环境感知磁盘创建器")
-        print("python env_disk_creator.py [命令] [参数]")
-        print("\n命令:")
-        print("  create <size> [use_case] [env_hint]  - 创建磁盘")
-        print("  batch                           - 批量创建(交互式)")
-        print("  env-list                        - 列出环境")  
-        print("  env-show <env_id>               - 显示环境详情")
-        print("  test <env_id>                   - 测试环境连接")
+        logger.info("🔧 环境感知磁盘创建器")
+        logger.info("python env_disk_creator.py [命令] [参数]")
+        logger.info("\n命令:")
+        logger.info("  create <size> [use_case] [env_hint]  - 创建磁盘")
+        logger.info("  batch                           - 批量创建(交互式)")
+        logger.info("  env-list                        - 列出环境")  
+        logger.info("  env-show <env_id>               - 显示环境详情")
+        logger.info("  test <env_id>                   - 测试环境连接")
         return
     
     command = sys.argv[1]
     
     if command == "create":
         if len(sys.argv) < 3:
-            print("❌ 请提供磁盘大小 (GB)")
+            logger.error("❌ 请提供磁盘大小 (GB)")
             return
         
         disk_size = int(sys.argv[2])
@@ -248,20 +256,20 @@ def main():
     
     elif command == "env-show":
         if len(sys.argv) < 3:
-            print("❌ 请提供环境ID")
+            logger.error("❌ 请提供环境ID")
             return
         env = creator.env_manager.get_environment(sys.argv[2])
         if env:
-            print(f"\n📋 环境详情: {sys.argv[2]}")
-            print("=" * 40)
+            logger.info(f"\n📋 环境详情: {sys.argv[2]}")
+            logger.info("=" * 40)
             for key, value in env.items():
-                print(f"{key}: {value}")
+                logger.info(f"{key}: {value}")
         else:
-            print(f"❌ 环境不存在: {sys.argv[2]}")
+            logger.error(f"❌ 环境不存在: {sys.argv[2]}")
     
     elif command == "test":
         if len(sys.argv) < 3:
-            print("❌ 请提供环境ID")
+            logger.error("❌ 请提供环境ID")
             return
         creator.check_environment(sys.argv[2])
 

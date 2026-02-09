@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-02-04T13:06:15.773515",
+  "environment": "172.118.34.100",
+  "username": "admin",
+  "operation": {
+    "action": "create",
+    "size": 10,
+    "count": 1,
+    "name_prefix": "replication-test-disk",
+    "template": "basic"
+  },
+  "result": {
+    "success": true,
+    "message": "成功创建1个虚拟磁盘",
+    "template": "basic",
+    "created_disks": [
+      {
+        "name": "replication-test-disk-000",
+        "diskId": "disk-1770181575-000",
+        "ref": "ref-70181575-000",
+        "size": 10,
+        "template": "basic",
+        "config": {
+          "pageSize": "4K",
+          "compression": "Disabled",
+          "iops": 100,
+          "bandwidth": 100
+        }
+      }
+    ],
+    "total_count": 1,
+    "config": {
+      "pageSize": "4K",
+      "compression": "Disabled",
+      "iops": 100,
+      "bandwidth": 100
+    }
+  }
+}

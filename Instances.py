@@ -1,4 +1,14 @@
 from utils.audit import ArcherAudit
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 from utils.tools.sshcommand import ssh_execute_command
 from utils.tools.Str import  convert_policy_string_to_dict
 import  urllib3
@@ -15,7 +25,7 @@ class Instances:
 
     def createInstance_noNet(self, name, hostname, videoModel, haEnable, cpu, sockets, memory, zoneId, storageType,
                               storageManageId, diskType, imageId, adminPassword,size=80,rebuildPriority=3,numaEnable=False,
-                            vmActive=False,vncPwd="",bigPageEnable=False,balloonSwitch=False,audioType="ich6",cloneType="LINK",priority=1) -> list:
+                            vmActive=False,vncPwd="",bigPageEnable=False,balloonSwitch=False,audioType="ich6",cloneType="LINK",priority=1):
         """
         通过安超API创建一个无网卡的虚拟机实例
         :return: 创建的结果，返回的是一个列表，包含创建的虚拟机IDs
@@ -34,26 +44,82 @@ class Instances:
         adminPassword: 虚拟机管理员密码
         diskType: 磁盘类型ID
         """
-        print("Instance createInstance_noNet:","进入方法体")
+        logger.info("Instance createInstance_noNet:","进入方法体")
         url = f"{self.base_url}/api/resource/createVirtualMachine"
-        payload = {"name":name,"hostname":hostname,"folderId":"100e4de3-1b8a-8cbe-e505-bc49edbb8503",
-                    "videoModel":videoModel,"vmHaConfig":{"ftEnable":False,"haEnable":haEnable},
-                    "type":"NORMAL","cpuMode":"host-passthrough","cpu":cpu,"sockets":sockets,"memory":memory,"zoneId":zoneId,
-                    "count":1,"storageType":storageType.upper(),
-                    "disk":[{"storageManageId":storageManageId,"size":size,"ioThread":True,
-                            "turboEnable":False,"compression":"LZ4","diskType":diskType,
-                            "pageSize":"4K","readCache":True,"rebuildPriority":rebuildPriority,"isSystem":True}],"isMemMonopoly":False,
-                            "numaEnable":numaEnable,"balloonSwitch":balloonSwitch,"audioType":audioType,"clock":"utc","cloneType":cloneType,
-                            "vmActive":vmActive,"vncPwd":vncPwd,"bigPageEnable":bigPageEnable,"cpuLimitEnabled":False,"cpuLimit":None,
-                            "cpuShareLevel":"MID","cpuShare":None,"tagIds":[],"isTemplate":False,"usbType":"3.0",
-                            "storageManageId":storageManageId,"priority":priority,"createVmType":"SYSTEMDEFAULT",
-                            "imageId":imageId,"adminPassword":adminPassword,"script":[None],"interface":[]}
-        print("Instance createInstance_noNet payload:", payload)
+        payload = {
+                    "name": name,
+                    "hostname": hostname,
+                    "folderId": "100e4de3-1b8a-8cbe-e505-bc49edbb8503",
+                    "videoModel": videoModel,
+                    "vmHaConfig": {"ftEnable": False, "haEnable": haEnable},
+                    "type": "NORMAL",
+                    "cpuMode": "custom",  # 改为custom
+                    "cpu": cpu,
+                    "sockets": sockets,
+                    "memory": memory,
+                    "zoneId": zoneId,
+                    "count": 1,
+                    "storageType": storageType.upper(),
+                    "disk": [{
+                        "storageManageId": storageManageId,
+                        "size": size,
+                        "ioThread": True,
+                        "compression": "Disabled",  # 改为Disabled
+                        "diskType": diskType,
+                        "pageSize": "4K",
+                        "readCache": True,
+                        "rebuildPriority": rebuildPriority,
+                        "isSystem": True
+                    }],
+                    "isMemMonopoly": False,
+                    "numaEnable": numaEnable,
+                    "balloonSwitch": balloonSwitch,
+                    "audioType": audioType,
+                    "clock": "localtime",  # 改为localtime
+                    "cloneType": cloneType,
+                    "vmActive": vmActive,
+                    "vncPwd": vncPwd,
+                    "bigPageEnable": bigPageEnable,
+                    "cpuLimitEnabled": False,
+                    "cpuLimit": None,
+                    "cpuShareLevel": "MID",
+                    "cpuShare": None,
+                    "tagIds": [],
+                    "isTemplate": False,
+                    "usbType": "3.0",
+                    "storageManageId": storageManageId,
+                    "priority": priority,
+                    "createVmType": "SYSTEMDEFAULT",
+                    "imageId": imageId,
+                    "adminPassword": adminPassword,
+                    "script": [None],  # 恢复这个参数
+                    "interface": []  # 恢复这个参数
+                }
+        logger.info("Instance createInstance_noNet payload:", payload)
         response = self.session.post(url, json=payload, verify=False)
-        print("Instance createInstance_noNet:", response.json())
-        if response.status_code == 200 and response.json().get('code') == 0:
-            self.instances.extend(response.json().get('data').get('ids'))
-        return response.json().get('data').get('ids')
+        logger.info("Instance createInstance_noNet:", response.json())
+        response_data = response.json()
+        if response.status_code == 200:
+            # 成功响应，可能没有code字段，直接检查data.ids
+            if 'data' in response_data and 'ids' in response_data['data']:
+                ids = response_data['data']['ids']
+                self.instances.extend(ids)
+                return ids
+            # 或者检查是否有code字段且为0
+            elif response_data.get('code') == 0:
+                ids = response_data.get('data', {}).get('ids', [])
+                self.instances.extend(ids)
+                return ids
+            # 如果有错误码
+            elif response_data.get('errorCode'):
+                logger.info(f"API错误: {response_data.get('errorMessage', '未知错误')}")
+                return None
+            else:
+                logger.info(f"未知响应格式: {response_data}")
+                return None
+        else:
+            logger.info(f"HTTP错误: {response.status_code}")
+            return None
     
     def getVminfobyid(self, vmId: str) -> dict:
         """
@@ -63,7 +129,7 @@ class Instances:
         url = f"{self.base_url}/api/resource/getVirtualMachine"
         payload = {"id":vmId}
         response = self.session.post(url, json=payload, verify=False)
-        print("Instance getVminfobyid response:", response.json())
+        logger.info("Instance getVminfobyid response:", response.json())
         if response.status_code == 200 and response.json().get('code') == 0:
             return response.json().get('data')
         else:
@@ -77,7 +143,7 @@ class Instances:
         url = f"{self.base_url}/api/resource/deleteVirtualMachine"
         payload = {"ids":[vmId]}
         response = self.session.post(url, json=payload, verify=False)
-        print("Instance deleteInstance_byId response:", response.json())
+        logger.info("Instance deleteInstance_byId response:", response.json())
         if response.status_code == 200 and response.json().get('code') == 0:
             return True
         else:

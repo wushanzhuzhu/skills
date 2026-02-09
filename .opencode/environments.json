@@ -1,0 +1,43 @@
+{
+  "environments": {
+    "production": {
+      "name": "存算分离环境",
+      "url": "https://172.118.57.100",
+      "username": "admin",
+      "password": "Admin@123",
+      "description": "存算分离环境",
+      "tags": [
+        "test",
+        "dev",
+        "测试"
+      ],
+      "storage_backend": "iscsi"
+    },
+    "test": {
+      "name": "浪潮5代繁体版环境",
+      "url": "https://172.118.34.100",
+      "username": "admin",
+      "password": "Admin@123",
+      "description": "繁体版环境",
+      "tags": [
+        "test",
+        "dev",
+        "测试"
+      ],
+      "storage_backend": "HyperStor"
+    },
+    "dev": {
+      "name": "GPU环境",
+      "url": "https://172.118.42.100",
+      "username": "admin",
+      "password": "Admin@123",
+      "description": "存在GPU设备的环境",
+      "tags": [
+        "test",
+        "dev",
+        "测试"
+      ],
+      "storage_backend": "HyperStor"
+    }
+  }
+}

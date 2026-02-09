@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-02-04T13:03:50.305106",
+  "environment": "172.118.34.100",
+  "username": "admin",
+  "operation": {
+    "action": "get-replication",
+    "disk_ref": "test-ref-id"
+  },
+  "result": {
+    "success": true,
+    "message": "获取磁盘 test-ref-id 副本信息成功",
+    "disk_ref": "test-ref-id",
+    "replication_info": {
+      "numberOfMirrors": 3,
+      "rebuildPriority": 1
+    },
+    "mirrors_info": [
+      "storage-node-1",
+      "storage-node-2",
+      "storage-node-3"
+    ],
+    "hostname": "172.118.34.100",
+    "query_time": "2026-02-04 13:03:50"
+  }
+}

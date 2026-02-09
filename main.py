@@ -6,11 +6,20 @@ from Hosts import Hosts
 from Images import Images
 import threading
 import time
+import logging
 from sshcommand import ssh_execute_command
 from volumes import Volumes
 from utils.tools.Str import to_ipv4_address
 from Dbclient import MySQLClient
 from tools import register_all_tools
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger(__name__)
 
 # Create an MCP server
 mcp = FastMCP("Demo",host="0.0.0.0", port=8080, json_response=True)
@@ -115,9 +124,9 @@ def sshexecute_command(hostip, command, port: int=22, username:str="cloud", key_
     === 版本信息 ===
     v1.0（2024-01更新）：新增IPMI远程开机/关机/状态查询支持
     """
-    print("sshexecute_command input:", hostip, port, username, key_path, command)
+    logger.info("sshexecute_command input:", hostip, port, username, key_path, command)
     rs = ssh_execute_command(hostip, port, username, key_path, command)
-    print("sshexecute_command rs:", rs)
+    logger.info("sshexecute_command rs:", rs)
     return rs
 
 @mcp.tool()
@@ -335,7 +344,7 @@ def getSession(url: str,name: str="admin", password: str="") -> str:
         Dba = MySQLClient(ipv4_address, "root", "cloudadmin#Passw0rd")
         global_state.db = Dba
     except Exception as e:
-        print(f"MySQLClient initialization failed: {e}")
+        logger.info(f"MySQLClient initialization failed: {e}")
         global_state.db = None
     if global_state.audit.setSession():
         return "成功获取了安超平台的交互会话.并初始化平台上下文"
@@ -408,18 +417,18 @@ def createInstance_noNet(name: str, hostname: str,  videoModel: str, imageId: st
         return "请先调用getSession方法获取安超平台的交互会话."
     instance_manager = global_state.instances
     storinfo = global_state.host.getStorsbyDiskType()
-    print("createInstance_noNet storinfo:", storinfo)
+    logger.info("createInstance_noNet storinfo:", storinfo)
     for stor in storinfo:
         if stor.get("stackName").upper() == storname.upper():
             storageManageId = stor.get("storageManageId")
             diskType = stor.get("diskType")
             storageType = stor.get("storageBackend")
-            print("createInstance_noNet storinfo:", storageManageId, diskType, storageType)
-    print("createInstance_noNet storageManageId, diskType, storageType:", storageManageId, diskType, storageType)
+            logger.info("createInstance_noNet storinfo:", storageManageId, diskType, storageType)
+    logger.info("createInstance_noNet storageManageId, diskType, storageType:", storageManageId, diskType, storageType)
     if storageManageId == "" or diskType == "" or storageType == "":
         return f"未能找到名称为{storname}的存储信息，请确认该存储名称是否正确。"
     image_list = global_state.image.getImagebystorageManageId(global_state.host)
-    print("createInstance_noNet image_list:", image_list)
+    logger.info("createInstance_noNet image_list:", image_list)
     if len(image_list) == 0:
         return "当前安超平台没有可用的镜像，请先上传镜像。"
     if imageId =="" or imageId is None:
@@ -432,10 +441,10 @@ def createInstance_noNet(name: str, hostname: str,  videoModel: str, imageId: st
                 checkimageId = True
         if checkimageId == False:
             return f"镜像ID {imageId} 在存储位置 {storname} 中不可用，请重新选择正确的镜像ID。"
-    print("createInstance_noNet imageId:", imageId)
+    logger.info("createInstance_noNet imageId:", imageId)
     name = name + time.strftime("_%Y%m%d%H%M%S", time.localtime())
     name = name[:40]  # 限制名称长度不超过40个字符
-    print("createInstance_noNet final all:", name, hostname, videoModel, haEnable, cpu, 1, memory, global_state.host.zone,
+    logger.info("createInstance_noNet final all:", name, hostname, videoModel, haEnable, cpu, 1, memory, global_state.host.zone,
           storageType, storageManageId, diskType, imageId, adminPassword,size,rebuildPriority,numaEnable,vmActive,vncPwd,bigPageEnable,balloonSwitch,audioType,cloneType,priority)
     vm_id = instance_manager.createInstance_noNet(name, hostname, videoModel, haEnable, cpu, 1, memory, global_state.host.zone,
                                                    storageType, storageManageId, diskType, imageId, adminPassword, size=size,
@@ -519,7 +528,7 @@ def createDisk_vstor(storageManageId: str, pageSize: str, compression: str, name
         return "请先调用getSession方法获取安超平台的交互会话."
     volume_manager = global_state.volumes
     global_state.volumes.disks.append(volume_manager)
-    print("mcp createDisk_vstor input:", storageManageId, pageSize, compression, name, size, iops, bandwidth, count, readCache, zoneId)
+    logger.info("mcp createDisk_vstor input:", storageManageId, pageSize, compression, name, size, iops, bandwidth, count, readCache, zoneId)
     disk_info = volume_manager.createDisk_vstor(storageManageId, pageSize, compression, name, size, iops, bandwidth, count, readCache, zoneId)
     return disk_info
 

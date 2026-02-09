@@ -1,0 +1,41 @@
+{
+  "production": {
+    "name": "生产环境",
+    "url": "https://172.118.57.100",
+    "username": "admin",
+    "password": "Admin@123",
+    "description": "主要生产环境，用于正式业务",
+    "tags": [
+      "prod",
+      "main",
+      "正式"
+    ],
+    "storage_backend": "iscsi"
+  },
+  "test": {
+    "name": "测试环境",
+    "url": "https://192.168.1.100",
+    "username": "admin",
+    "password": "Test@123",
+    "description": "测试环境，用于功能验证",
+    "tags": [
+      "test",
+      "dev",
+      "测试"
+    ],
+    "storage_backend": "iscsi"
+  },
+  "dev": {
+    "name": "开发环境",
+    "url": "https://10.0.0.100",
+    "username": "developer",
+    "password": "Dev@123",
+    "description": "开发环境，用于代码调试",
+    "tags": [
+      "dev",
+      "debug",
+      "开发"
+    ],
+    "storage_backend": "local"
+  }
+}

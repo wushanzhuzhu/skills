@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-02-04T12:37:00.932880",
+  "environment": "dummy",
+  "username": "admin",
+  "operation": {
+    "action": "get-detail",
+    "disk_name": "test-disk-001"
+  },
+  "result": {
+    "success": true,
+    "message": "获取磁盘 test-disk-001 详细信息成功",
+    "disk_info": {
+      "name": "test-disk-001",
+      "diskId": "disk-1770179820",
+      "ref": "ref-1770179820",
+      "size": 10,
+      "status": "available",
+      "pageSize": "4K",
+      "compression": "Disabled",
+      "iops": 100,
+      "bandwidth": 100
+    }
+  }
+}

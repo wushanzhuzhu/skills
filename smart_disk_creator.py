@@ -5,6 +5,16 @@
 """
 
 import sys
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import os
 import inspect
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -168,13 +178,13 @@ class SmartDiskCreator:
     def create_disk_smart(self, disk_size_gb, use_case="standard"):
         """智能创建磁盘，避免试错"""
         
-        print(f"🎯 开始智能创建 {disk_size_gb}GB 磁盘...")
+        logger.info(f"🎯 开始智能创建 {disk_size_gb}GB 磁盘...")
         
         # 生成优化配置
         config_result = self.generate_optimal_config(disk_size_gb, use_case)
         
         if not config_result["success"]:
-            print(f"❌ 配置生成失败: {config_result['error']}")
+            logger.error(f"❌ 配置生成失败: {config_result['error']}")
             return False
         
         config = config_result["config"]
@@ -182,52 +192,52 @@ class SmartDiskCreator:
         
         # 检查验证结果
         if not validation["valid"]:
-            print("❌ 配置验证失败:")
+            logger.error("❌ 配置验证失败:")
             for error in validation["errors"]:
-                print(f"   • {error}")
+                logger.info(f"   • {error}")
             return False
         
-        print(f"✅ 配置验证通过")
-        print(f"📋 使用模板: {config_result['template_used']}")
-        print(f"🔧 存储后端: {config_result['storage_backend']}")
+        logger.info(f"✅ 配置验证通过")
+        logger.info(f"📋 使用模板: {config_result['template_used']}")
+        logger.info(f"🔧 存储后端: {config_result['storage_backend']}")
         
         # 显示配置
-        print(f"📝 磁盘配置:")
-        print(f"   名称: {config['name']}")
-        print(f"   大小: {config['size']}GB")
-        print(f"   页面大小: {config['pageSize']}")
-        print(f"   压缩: {config['compression']}")
-        print(f"   IOPS: {config['iops']}")
-        print(f"   带宽: {config['bandwidth']} MB/s")
-        print(f"   读缓存: {'开启' if config['readCache'] else '关闭'}")
+        logger.info(f"📝 磁盘配置:")
+        logger.info(f"   名称: {config['name']}")
+        logger.info(f"   大小: {config['size']}GB")
+        logger.info(f"   页面大小: {config['pageSize']}")
+        logger.info(f"   压缩: {config['compression']}")
+        logger.info(f"   IOPS: {config['iops']}")
+        logger.info(f"   带宽: {config['bandwidth']} MB/s")
+        logger.info(f"   读缓存: {'开启' if config['readCache'] else '关闭'}")
         
         # 创建磁盘
         try:
             from volumes import Volumes
             self.volumes = Volumes(self.audit, self.host)
             
-            print("🚀 正在创建磁盘...")
+            logger.info("🚀 正在创建磁盘...")
             result = self.volumes.createDisk_vstor(**config)
             
             # 解析结果
             if isinstance(result, dict) and 'data' in result:
                 if result['data'] and len(result['data']) > 0:
                     disk_info = result['data'][0]
-                    print("✅ 磁盘创建成功!")
-                    print(f"📁 磁盘ID: {disk_info['id']}")
-                    print(f"📝 磁盘名称: {disk_info['name']}")
+                    logger.info("✅ 磁盘创建成功!")
+                    logger.info(f"📁 磁盘ID: {disk_info['id']}")
+                    logger.info(f"📝 磁盘名称: {disk_info['name']}")
                     return True
                 else:
-                    print("❌ 创建失败: 返回数据为空")
-                    print(f"响应: {result}")
+                    logger.error("❌ 创建失败: 返回数据为空")
+                    logger.info(f"响应: {result}")
                     return False
             else:
-                print("❌ 创建失败: 意外的响应格式")
-                print(f"响应: {result}")
+                logger.error("❌ 创建失败: 意外的响应格式")
+                logger.info(f"响应: {result}")
                 return False
                 
         except Exception as e:
-            print(f"❌ 创建过程中发生错误: {e}")
+            logger.error(f"❌ 创建过程中发生错误: {e}")
             return False
 
 # 使用示例
@@ -236,6 +246,6 @@ if __name__ == "__main__":
     success = creator.create_disk_smart(10, "standard")
     
     if success:
-        print("\n🎉 智能磁盘创建完成!")
+        logger.info("\n🎉 智能磁盘创建完成!")
     else:
-        print("\n💥 创建失败")
+        logger.info("\n💥 创建失败")

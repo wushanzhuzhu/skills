@@ -5,6 +5,16 @@ VM配置模板系统
 """
 
 import json
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import os
 from typing import Dict, List, Optional
 from vm_analyzer import VMAnalyzer
@@ -330,16 +340,16 @@ class VMConfigTemplates:
         """导出模板到文件"""
         template = self.get_template(template_name)
         if not template:
-            print(f"❌ 模板不存在: {template_name}")
+            logger.error(f"❌ 模板不存在: {template_name}")
             return False
         
         try:
             with open(filename, 'w', encoding='utf-8') as f:
                 json.dump({template_name: template}, f, ensure_ascii=False, indent=2)
-            print(f"✅ 模板已导出到: {filename}")
+            logger.info(f"✅ 模板已导出到: {filename}")
             return True
         except Exception as e:
-            print(f"❌ 导出失败: {e}")
+            logger.error(f"❌ 导出失败: {e}")
             return False
     
     def import_template(self, filename: str) -> bool:
@@ -353,13 +363,13 @@ class VMConfigTemplates:
                 required_fields = ["name", "hostname", "cpu", "memory", "size"]
                 if all(field in config for field in required_fields):
                     self.custom_templates[name] = config
-                    print(f"✅ 已导入模板: {name}")
+                    logger.info(f"✅ 已导入模板: {name}")
                 else:
-                    print(f"❌ 模板格式不正确: {name}")
+                    logger.error(f"❌ 模板格式不正确: {name}")
             
             return True
         except Exception as e:
-            print(f"❌ 导入失败: {e}")
+            logger.error(f"❌ 导入失败: {e}")
             return False
     
     def display_templates_table(self, templates: List[Dict] = None):
@@ -368,21 +378,21 @@ class VMConfigTemplates:
             templates = self.list_templates()
         
         if not templates:
-            print("📭 没有可用的模板")
+            logger.info("📭 没有可用的模板")
             return
         
-        print("\n🎯 VM配置模板列表:")
-        print("=" * 80)
-        print(f"{'模板名称':<15} {'CPU':<4} {'内存':<6} {'磁盘':<8} {'HA':<3} {'用途':<20} {'成本':<8}")
-        print("-" * 80)
+        logger.info("\n🎯 VM配置模板列表:")
+        logger.info("=" * 80)
+        logger.info(f"{'模板名称':<15} {'CPU':<4} {'内存':<6} {'磁盘':<8} {'HA':<3} {'用途':<20} {'成本':<8}")
+        logger.info("-" * 80)
         
         for template in templates:
             ha = "是" if template["ha"] else "否"
-            print(f"{template['name']:<15} {template['cpu']:<4} "
+            logger.info(f"{template['name']:<15} {template['cpu']:<4} "
                   f"{template['memory']:<6} {template['size']:<8} "
                   f"{ha:<3} {template['use_case'][:18]:<20} {template['cost']:<8}")
         
-        print("=" * 80)
+        logger.info("=" * 80)
 
 def main():
     """命令行界面"""
@@ -391,16 +401,16 @@ def main():
     templates = VMConfigTemplates()
     
     if len(sys.argv) < 2:
-        print("🔧 VM配置模板管理器")
-        print("python vm_config_templates.py [命令] [参数]")
-        print("\n命令:")
-        print("  list                      - 列出所有模板")
-        print("  show <template_name>     - 显示模板详情")
-        print("  search <keyword>          - 搜索模板")
-        print("  generate <template> <num> - 生成VM配置")
-        print("  recommend <use_case>      - 智能推荐模板")
-        print("  export <template> <file>  - 导出模板")
-        print("  import <file>             - 导入模板")
+        logger.info("🔧 VM配置模板管理器")
+        logger.info("python vm_config_templates.py [命令] [参数]")
+        logger.info("\n命令:")
+        logger.info("  list                      - 列出所有模板")
+        logger.info("  show <template_name>     - 显示模板详情")
+        logger.info("  search <keyword>          - 搜索模板")
+        logger.info("  generate <template> <num> - 生成VM配置")
+        logger.info("  recommend <use_case>      - 智能推荐模板")
+        logger.info("  export <template> <file>  - 导出模板")
+        logger.info("  import <file>             - 导入模板")
         return
     
     command = sys.argv[1]
@@ -410,68 +420,68 @@ def main():
     
     elif command == "show":
         if len(sys.argv) < 3:
-            print("❌ 请提供模板名称")
+            logger.error("❌ 请提供模板名称")
             return
         template = templates.get_template(sys.argv[2])
         if template:
-            print(f"\n📋 模板详情: {sys.argv[2]}")
-            print("=" * 40)
+            logger.info(f"\n📋 模板详情: {sys.argv[2]}")
+            logger.info("=" * 40)
             for key, value in template.items():
-                print(f"{key}: {value}")
+                logger.info(f"{key}: {value}")
         else:
-            print(f"❌ 模板不存在: {sys.argv[2]}")
+            logger.error(f"❌ 模板不存在: {sys.argv[2]}")
     
     elif command == "search":
         if len(sys.argv) < 3:
-            print("❌ 请提供搜索关键词")
+            logger.error("❌ 请提供搜索关键词")
             return
         results = templates.search_templates(sys.argv[2])
-        print(f"\n🔍 搜索结果: '{sys.argv[2]}'")
+        logger.info(f"\n🔍 搜索结果: '{sys.argv[2]}'")
         templates.display_templates_table([{"name": name, **config} for name, config in results.items()])
     
     elif command == "generate":
         if len(sys.argv) < 4:
-            print("❌ 请提供模板名称和VM编号")
+            logger.error("❌ 请提供模板名称和VM编号")
             return
         template_name = sys.argv[2]
         vm_num = int(sys.argv[3])
         
         try:
             config = templates.generate_vm_config(template_name, vm_num)
-            print(f"\n📋 生成的VM配置 (模板: {template_name}, 编号: {vm_num}):")
-            print("=" * 50)
-            print(json.dumps(config, ensure_ascii=False, indent=2))
+            logger.info(f"\n📋 生成的VM配置 (模板: {template_name}, 编号: {vm_num}):")
+            logger.info("=" * 50)
+            logger.info(json.dumps(config, ensure_ascii=False, indent=2))
         except Exception as e:
-            print(f"❌ 生成配置失败: {e}")
+            logger.error(f"❌ 生成配置失败: {e}")
     
     elif command == "recommend":
         if len(sys.argv) < 3:
-            print("❌ 请提供用例")
+            logger.error("❌ 请提供用例")
             return
         use_case = sys.argv[2]
         performance = sys.argv[3] if len(sys.argv) > 3 else "standard"
         
         result = templates.recommend_template(use_case, performance)
-        print(f"\n🎯 推荐结果:")
-        print("=" * 50)
-        print(f"推荐模板: {result['template_name']}")
-        print(f"推荐理由: {result['reasoning']}")
-        print(f"替代方案: {', '.join(result['alternatives'])}")
+        logger.info(f"\n🎯 推荐结果:")
+        logger.info("=" * 50)
+        logger.info(f"推荐模板: {result['template_name']}")
+        logger.info(f"推荐理由: {result['reasoning']}")
+        logger.info(f"替代方案: {', '.join(result['alternatives'])}")
     
     elif command == "export":
         if len(sys.argv) < 4:
-            print("❌ 请提供模板名称和文件名")
+            logger.error("❌ 请提供模板名称和文件名")
             return
         templates.export_template(sys.argv[2], sys.argv[3])
     
     elif command == "import":
         if len(sys.argv) < 3:
-            print("❌ 请提供文件名")
+            logger.error("❌ 请提供文件名")
             return
         templates.import_template(sys.argv[2])
     
     else:
-        print(f"❌ 未知命令: {command}")
+        logger.error(f"❌ 未知命令: {command}")
 
 if __name__ == "__main__":
     main()

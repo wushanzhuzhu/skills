@@ -5,6 +5,16 @@ VM API分析工具
 """
 
 import inspect
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -19,8 +29,8 @@ class VMAnalyzer:
         
     def analyze_vm_api(self):
         """分析VM创建API"""
-        print("🔍 VM API分析报告")
-        print("=" * 50)
+        logger.info("🔍 VM API分析报告")
+        logger.info("=" * 50)
         
         try:
             from Instances import Instances
@@ -29,11 +39,11 @@ class VMAnalyzer:
             method = getattr(Instances, 'createInstance_noNet', None)
             if method:
                 sig = inspect.signature(method)
-                print(f"📝 createInstance_noNet{sig}")
+                logger.info(f"📝 createInstance_noNet{sig}")
                 
                 # 分析参数
                 params = sig.parameters
-                print(f"\n📋 参数列表 ({len(params)} 个):")
+                logger.info(f"\n📋 参数列表 ({len(params)} 个):")
                 for param_name, param in params.items():
                     param_info = {
                         'name': param_name,
@@ -41,21 +51,21 @@ class VMAnalyzer:
                         'default': param.default if param.default != inspect.Parameter.empty else 'Required',
                         'kind': param.kind.name
                     }
-                    print(f"   {param_name}: {param_info}")
+                    logger.info(f"   {param_name}: {param_info}")
                 
                 return params
             else:
-                print("❌ 未找到createInstance_noNet方法")
+                logger.error("❌ 未找到createInstance_noNet方法")
                 return None
                 
         except Exception as e:
-            print(f"❌ API分析失败: {e}")
+            logger.error(f"❌ API分析失败: {e}")
             return None
     
     def analyze_parameter_constraints(self):
         """分析参数约束"""
-        print("\n🎯 参数约束分析")
-        print("=" * 50)
+        logger.info("\n🎯 参数约束分析")
+        logger.info("=" * 50)
         
         constraints = {
             # 必需参数
@@ -234,30 +244,30 @@ class VMAnalyzer:
         
         all_constraints = {**constraints, **optional_constraints}
         
-        print("📋 必需参数:")
+        logger.info("📋 必需参数:")
         for param, info in constraints.items():
-            print(f"   {param}:")
-            print(f"     类型: {info['type']}")
-            print(f"     描述: {info['description']}")
+            logger.info(f"   {param}:")
+            logger.info(f"     类型: {info['type']}")
+            logger.info(f"     描述: {info['description']}")
             if 'options' in info:
-                print(f"     选项: {info['options']}")
+                logger.info(f"     选项: {info['options']}")
             if 'range' in info:
-                print(f"     范围: {info['range']}")
+                logger.info(f"     范围: {info['range']}")
             if 'default' in info:
-                print(f"     默认值: {info['default']}")
-            print()
+                logger.info(f"     默认值: {info['default']}")
+            logger.info()
         
-        print("📋 可选参数:")
+        logger.info("📋 可选参数:")
         for param, info in optional_constraints.items():
-            print(f"   {param}: {info['description']} (默认: {info['default']})")
+            logger.info(f"   {param}: {info['description']} (默认: {info['default']})")
         
         self.parameter_constraints = all_constraints
         return all_constraints
     
     def create_vm_templates(self):
         """创建VM配置模板"""
-        print("\n🎯 VM配置模板设计")
-        print("=" * 50)
+        logger.info("\n🎯 VM配置模板设计")
+        logger.info("=" * 50)
         
         templates = {
             "basic": {
@@ -333,20 +343,20 @@ class VMAnalyzer:
             }
         }
         
-        print("📋 预定义模板:")
+        logger.info("📋 预定义模板:")
         for template_name, config in templates.items():
-            print(f"   {template_name}: {config['description']}")
-            print(f"     CPU: {config['cpu']}核, 内存: {config['memory']}GB, 磁盘: {config['size']}GB")
-            print(f"     HA: {config['haEnable']}, 用途: {config['use_case']}")
-            print()
+            logger.info(f"   {template_name}: {config['description']}")
+            logger.info(f"     CPU: {config['cpu']}核, 内存: {config['memory']}GB, 磁盘: {config['size']}GB")
+            logger.info(f"     HA: {config['haEnable']}, 用途: {config['use_case']}")
+            logger.info()
         
         self.vm_templates = templates
         return templates
     
     def validate_vm_config(self, config):
         """验证VM配置"""
-        print("\n✅ VM配置验证")
-        print("=" * 50)
+        logger.info("\n✅ VM配置验证")
+        logger.info("=" * 50)
         
         validation_result = {
             "valid": True,
@@ -397,8 +407,8 @@ class VMAnalyzer:
     
     def recommend_optimal_config(self, use_case, vm_count=1):
         """推荐最优配置"""
-        print(f"\n🎯 为用例 '{use_case}' 推荐配置 (数量: {vm_count})")
-        print("=" * 50)
+        logger.info(f"\n🎯 为用例 '{use_case}' 推荐配置 (数量: {vm_count})")
+        logger.info("=" * 50)
         
         recommendations = {
             "office": {
@@ -426,10 +436,10 @@ class VMAnalyzer:
         recommendation = recommendations.get(use_case.lower(), recommendations["office"])
         template_config = self.vm_templates.get(recommendation["template"], self.vm_templates["basic"])
         
-        print(f"📋 推荐模板: {recommendation['template']}")
-        print(f"📝 理由: {recommendation['reasoning']}")
-        print(f"⚙️ 配置: CPU:{template_config['cpu']}核, 内存:{template_config['memory']}GB, 磁盘:{template_config['size']}GB")
-        print(f"🛡️ 高可用: {'是' if template_config['haEnable'] else '否'}")
+        logger.info(f"📋 推荐模板: {recommendation['template']}")
+        logger.info(f"📝 理由: {recommendation['reasoning']}")
+        logger.info(f"⚙️ 配置: CPU:{template_config['cpu']}核, 内存:{template_config['memory']}GB, 磁盘:{template_config['size']}GB")
+        logger.info(f"🛡️ 高可用: {'是' if template_config['haEnable'] else '否'}")
         
         return {
             "template": recommendation["template"],
@@ -444,14 +454,14 @@ def main():
     analyzer = VMAnalyzer()
     
     if len(sys.argv) < 2:
-        print("🔧 VM API分析工具")
-        print("python vm_analyzer.py [命令] [参数]")
-        print("\n命令:")
-        print("  analyze                    - 分析VM API")
-        print("  constraints                - 显示参数约束")
-        print("  templates                  - 显示配置模板")
-        print("  validate <config_file>     - 验证配置文件")
-        print("  recommend <use_case>       - 推荐配置")
+        logger.info("🔧 VM API分析工具")
+        logger.info("python vm_analyzer.py [命令] [参数]")
+        logger.info("\n命令:")
+        logger.info("  analyze                    - 分析VM API")
+        logger.info("  constraints                - 显示参数约束")
+        logger.info("  templates                  - 显示配置模板")
+        logger.info("  validate <config_file>     - 验证配置文件")
+        logger.info("  recommend <use_case>       - 推荐配置")
         return
     
     command = sys.argv[1]
@@ -467,14 +477,14 @@ def main():
     
     elif command == "recommend":
         if len(sys.argv) < 3:
-            print("❌ 请提供用例: office, web, database, development, compute")
+            logger.error("❌ 请提供用例: office, web, database, development, compute")
             return
         use_case = sys.argv[2]
         analyzer.recommend_optimal_config(use_case)
     
     elif command == "validate":
         if len(sys.argv) < 3:
-            print("❌ 请提供配置文件路径")
+            logger.error("❌ 请提供配置文件路径")
             return
         config_file = sys.argv[2]
         try:
@@ -482,18 +492,18 @@ def main():
             with open(config_file, 'r') as f:
                 config = json.load(f)
             result = analyzer.validate_vm_config(config)
-            print("✅" if result["valid"] else "❌", "配置验证结果")
+            logger.info("✅" if result["valid"] else "❌", "配置验证结果")
             for error in result["errors"]:
-                print(f"   错误: {error}")
+                logger.info(f"   错误: {error}")
             for warning in result["warnings"]:
-                print(f"   警告: {warning}")
+                logger.info(f"   警告: {warning}")
             for rec in result["recommendations"]:
-                print(f"   建议: {rec}")
+                logger.info(f"   建议: {rec}")
         except Exception as e:
-            print(f"❌ 读取配置文件失败: {e}")
+            logger.error(f"❌ 读取配置文件失败: {e}")
     
     else:
-        print(f"❌ 未知命令: {command}")
+        logger.error(f"❌ 未知命令: {command}")
 
 if __name__ == "__main__":
     main()

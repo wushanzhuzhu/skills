@@ -5,6 +5,16 @@
 """
 
 import time
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import subprocess
 import json
 from datetime import datetime
@@ -12,8 +22,8 @@ from datetime import datetime
 def monitor_progress():
     """监控磁盘创建进度"""
     
-    print("🔍 磁盘创建进度监控器")
-    print("=" * 50)
+    logger.info("🔍 磁盘创建进度监控器")
+    logger.info("=" * 50)
     
     start_time = time.time()
     last_count = 0
@@ -50,7 +60,7 @@ def monitor_progress():
                 eta_hours = eta_minutes // 60
                 eta_minutes_remaining = int(eta_minutes % 60)
                 
-                print(f"[{current_time}] 进度: {batch_count}/1000 | "
+                logger.info(f"[{current_time}] 进度: {batch_count}/1000 | "
                       f"新增: +{new_disks} | "
                       f"速度: {rate:.1f}/min | "
                       f"剩余: {remaining} | "
@@ -61,17 +71,17 @@ def monitor_progress():
                 
                 # 如果达到1000个，停止监控
                 if batch_count >= 1000:
-                    print("\n🎉 恭喜！已完成1000个磁盘的创建！")
+                    logger.info("\n🎉 恭喜！已完成1000个磁盘的创建！")
                     break
                     
             # 等待60秒再次检查
             time.sleep(60)
             
     except KeyboardInterrupt:
-        print("\n👋 监控已停止")
+        logger.info("\n👋 监控已停止")
         
     except Exception as e:
-        print(f"\n❌ 监控出错: {e}")
+        logger.info(f"\n❌ 监控出错: {e}")
 
 if __name__ == "__main__":
     monitor_progress()

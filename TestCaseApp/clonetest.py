@@ -1,4 +1,14 @@
 from os.path import exists
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 
 import requests
 import time
@@ -45,16 +55,16 @@ class VMTestFramework:
         # 发送登录请求
         #response = self.session.post(login_url, json=payload)
         response = self.session.post(login_url, json=payload, verify=False)
-        print(response.json())
+        logger.info(response.json())
         if response.status_code == 200:
             # 提取响应中的token和sessionID
             response_data = response.json()
             self.auth_token = response_data.get("token")
             session_id = response_data.get("data").get("sessionId")  # 假设响应中包含sessionId字段
-            print("sessionId: ", session_id)
+            logger.info("sessionId: ", session_id)
             # 固定用户ID（根据实际业务需求调整）
             user_id = response_data.get("data").get("userId")
-            print("user_id: ", user_id)
+            logger.info("user_id: ", user_id)
             # 设置认证头
             auth_header = {
                 "Authorization": f"Bearer {self.auth_token}",
@@ -79,15 +89,15 @@ class VMTestFramework:
         vm_url = f"{self.base_url}/api/resource/listVirtualMachine"
         payload = {"pageNumber":1,"pageSize":20,"isInRecycleBin":False,"nameLike":vm_name}
         response = self.session.post(vm_url, json=payload, verify=False)
-        print("isready_from_vm_name_response", response.json())
+        logger.info("isready_from_vm_name_response", response.json())
         if response.status_code == 200:
             data_list = response.json().get("data", [])
             sourcevmid = data_list[0]["id"]
-            print("sourcevmid:", sourcevmid)
+            logger.info("sourcevmid:", sourcevmid)
             status = data_list[0]["status"]
-            print("status", status)
+            logger.info("status", status)
             taskStatus = data_list[0]["taskStatus"]
-            print("taskStatus", taskStatus)
+            logger.info("taskStatus", taskStatus)
             if status == "START" and taskStatus == "NONE":
                 return sourcevmid  # 返回虚拟机信息字典
             return ""
@@ -99,7 +109,7 @@ class VMTestFramework:
         vm_url = f"{self.base_url}/api/resource/listVirtualMachine"
         payload = {"pageNumber":1,"pageSize":20,"isInRecycleBin":False,"nameLike":vm_name}
         response = self.session.post(vm_url, json=payload, verify=False)
-        print("exists_vm_response", response.json())
+        logger.info("exists_vm_response", response.json())
         if response.status_code == 200:
             data_list = response.json().get("data", [])
             if data_list:
@@ -115,7 +125,7 @@ class VMTestFramework:
         clone_url = f"{self.base_url}/api/resource/copyVirtualMachineLink"
         payload = {"virtualMachineId":source_vm_id,"interface":[{"netType":"Normal","multyQueueNum":1,"macMethod":"mapping","securityGroupId":"df6b9b2a-5917-4e8c-9ca1-5b6046ed5c97","networkId":"47f728d7-4507-4695-9fc1-a8987bfac00d","nicModel":"vlan","subnets":[{"subnetId":"0ee4d0bc-cf17-4a70-9f2d-bad62d97e916","isDefaultRoute":True}]}],"cpu":1,"sockets":1,"sockets1":1,"cpuMode":"custom","balloonSwitch":False,"isMemMonopoly":False,"memory":2,"numaEnable":False,"compatibilityMode":False,"name":clonename,"count":1,"cloneType":"LINK","isStart":True,"haEnable":True,"priority":1,"cpuLimitEnabled":False,"cpuLimit":None,"cpuShareLevel":"MID","cpuShare":2048}
         response = self.session.post(clone_url, json=payload, verify=False)
-        print("clone_response", response.json())
+        logger.info("clone_response", response.json())
         if response.status_code == 200:
             return response.json().get("data").get("ids")[0]
         return ""
@@ -157,35 +167,35 @@ def main():
 
     # 1. 登录
     if not tester.login("admin", "password"):
-        print("登录失败，终止测试")
+        logger.info("登录失败，终止测试")
         return
 
     # 2. 获取原始虚拟机信息
     original_vm = tester.get_vm_info("original_vm")
     if not original_vm:
-        print("未找到原始虚拟机")
+        logger.info("未找到原始虚拟机")
         return
 
     # 3. 检查状态并克隆
     if original_vm.get("status") == "ACTIVE":
         clone_id = tester.clone_vm(original_vm.get("id"))
         if not clone_id:
-            print("克隆操作失败")
+            logger.info("克隆操作失败")
             return
 
         # 4. 轮询克隆状态
         if tester.poll_clone_status(clone_id):
-            print("克隆成功，虚拟机ID:", clone_id)
+            logger.info("克隆成功，虚拟机ID:", clone_id)
 
             # 5. 删除克隆虚拟机
             if tester.delete_clone_vm(clone_id):
-                print("克隆虚拟机删除成功")
+                logger.info("克隆虚拟机删除成功")
             else:
-                print("删除失败：状态异常或接口错误")
+                logger.info("删除失败：状态异常或接口错误")
         else:
-            print("克隆超时或失败")
+            logger.info("克隆超时或失败")
     else:
-        print("原始虚拟机状态非ACTIVE，跳过克隆")
+        logger.info("原始虚拟机状态非ACTIVE，跳过克隆")
 
 
 if __name__ == "__main__":
@@ -196,32 +206,32 @@ if __name__ == "__main__":
         svmid = ""
         i = 0
         while svmid=="":
-            print("获取源虚拟机ID中:第%i次" % i)
+            logger.info("获取源虚拟机ID中:第%i次" % i)
             if i > 10:
                 print ("源虚拟机状态未达预期，终止测试")
                 exit(0)
             svmid = test.isready_from_vm_name("wushan123_10")
             i = i+1
             time.sleep(20)
-        print("源虚拟机ID:", svmid)
+        logger.info("源虚拟机ID:", svmid)
         cname = "auto_DS_0002"
         clonevmid = test.clone_vm(cname, svmid)
-        print("clonevmid:", clonevmid)
+        logger.info("clonevmid:", clonevmid)
         if clonevmid == "":
-            print("未正常获取克隆虚拟机ID")
-        print(f"{cname}克隆中：{clonevmid}")
+            logger.info("未正常获取克隆虚拟机ID")
+        logger.info(f"{cname}克隆中：{clonevmid}")
 
         isreadyc = ""
         j = 0
         while isreadyc=="":
             j = j + 1
-            print(f"检测克隆虚拟机是否进入运行中状态：{j}次")
+            logger.info(f"检测克隆虚拟机是否进入运行中状态：{j}次")
             isreadyc = test.isready_from_vm_name(cname)
             if j > 10:
-                print("克隆虚拟机未进入运行中状态，退出测试")
+                logger.info("克隆虚拟机未进入运行中状态，退出测试")
                 exit(0)
             time.sleep(60)
-        print("删除克隆虚拟机")
+        logger.info("删除克隆虚拟机")
         test.delete_clone_vm(isreadyc)
 
         k = 0
@@ -231,7 +241,7 @@ if __name__ == "__main__":
             time.sleep(10)
             k = k + 1
             if k > 10:
-                print("克隆虚拟机未检测到被清理，退出测试")
+                logger.info("克隆虚拟机未检测到被清理，退出测试")
                 exit(0)
-        print(f"完成第{f}次克隆虚拟机-删除虚拟机，success")
+        logger.info(f"完成第{f}次克隆虚拟机-删除虚拟机，success")
         f = f + 1

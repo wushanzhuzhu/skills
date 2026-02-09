@@ -1,4 +1,14 @@
 import re
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 
 def to_https_url(input_str):
     """
@@ -129,4 +139,4 @@ def convert_policy_string_to_dict(input_str):
 
 if __name__ == '__main__':
     ip = "https://192.168.1.1"
-    print(to_ipv4_address(ip))  
+    logger.info(to_ipv4_address(ip))  

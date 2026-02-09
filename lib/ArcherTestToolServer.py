@@ -1,4 +1,14 @@
 from utils.audit import ArcherAudit
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 from utils.tools.sshcommand import ssh_execute_command
 from utils.tools.Str import  convert_policy_string_to_dict
 import re
@@ -16,16 +26,16 @@ class ArcherServer:
         vm_url = f"{self.base_url}/api/resource/listVirtualMachine"
         payload = {"pageNumber": 1, "pageSize": 20, "isInRecycleBin": False, "nameLike": vm_name}
         response = self.session.post(vm_url, json=payload, verify=False)
-        print("id_of_vm response", response.json())
+        logger.info("id_of_vm response", response.json())
         if response.status_code == 200:
             data_list = response.json().get("data", [])
             if data_list:
                 sourcevmid = data_list[0]["id"]
-                print("sourcevmid:", sourcevmid)
+                logger.info("sourcevmid:", sourcevmid)
                 #status = data_list[0]["status"]
-                #print("status", status)
+                #logger.info("status", status)
                 #taskStatus = data_list[0]["taskStatus"]
-                #print("taskStatus", taskStatus)
+                #logger.info("taskStatus", taskStatus)
                 #if status == "START" and taskStatus == "NONE":
                 return sourcevmid  # 返回虚拟机信息字典
         return ""
@@ -37,11 +47,11 @@ class ArcherServer:
         返回disk信息已包含云管的副本数和重建优先级。
         """
         url = f"{self.base_url}/api/resource/listDisk"
-        print("disk_info_of_vm vm_id:", vm_id)
+        logger.info("disk_info_of_vm vm_id:", vm_id)
         payload = {"vdiApplication":False,"vmId":vm_id,"pageNumber":1,"pageSize":20}
-        print("disk_info_of_vm payload", payload)
+        logger.info("disk_info_of_vm payload", payload)
         response = self.session.post(url, json=payload, verify=False)
-        print("disk_list_of_vm方法请求返回", response.json())
+        logger.info("disk_list_of_vm方法请求返回", response.json())
         disk_ids = []
         if response.status_code == 200:
             disk_result =  response.json().get("data")
@@ -54,8 +64,8 @@ class ArcherServer:
             pattern = r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'
             match = re.search(pattern, self.base_url)
             hostname = match.group(1) if match else None
-            print("stackdiskid:", stackdiskid)
-            print("hostname", hostname)
+            logger.info("stackdiskid:", stackdiskid)
+            logger.info("hostname", hostname)
             args = {
                 "hostname": hostname,
                 "port": 22,
@@ -73,11 +83,11 @@ class ArcherServer:
                 "command": '''sudo docker exec  mxsp zklist -i $(arblock show ''' + stackdiskid + ''' | grep provider_location | awk '{print $4}' | xargs -I {} ls -i /vstor{}/volume-''' + stackdiskid + ''' | awk 'NR==1{print $1}' ) -l |grep  mirror | awk '{print $1}' | sort -u'''
             }
             mirrors =ssh_execute_command(**mirrosargs)
-            print("mirrors", mirrors)
+            logger.info("mirrors", mirrors)
             item[1].update(sshresult)
             item[1].update({"mirrorsInfo": mirrors})
-            print("item[1]", item[1])
-        print("disk_ids:", disk_ids)
+            logger.info("item[1]", item[1])
+        logger.info("disk_ids:", disk_ids)
         return disk_ids
 
 

@@ -1,0 +1,218 @@
+{
+  "scenarios": {
+    "system_health_check": {
+      "name": "系统健康检查",
+      "description": "检查系统组件状态，生成综合健康报告",
+      "methods": [
+        "get_audit",
+        "get_clusterStor", 
+        "get_image",
+        "get_instances",
+        "get_volumes"
+      ],
+      "execution_mode": "sequential",
+      "timeout": 30,
+      "retry_on_failure": true,
+      "max_retries": 2
+    },
+    "resource_overview": {
+      "name": "资源管理概览", 
+      "description": "获取系统所有资源的详细信息和使用情况",
+      "methods": [
+        "getStorinfo",
+        "getImagebystorageManageId",
+        "get_instances",
+        "get_volumes"
+      ],
+      "execution_mode": "sequential",
+      "timeout": 45,
+      "retry_on_failure": true,
+      "max_retries": 2
+    },
+    "vm_creation_workflow": {
+      "name": "虚拟机创建工作流",
+      "description": "智能虚拟机创建，包含资源验证、创建和结果确认",
+      "steps": [
+        {
+          "name": "validate_resources",
+          "methods": ["getStorinfo", "getImagebystorageManageId"],
+          "required": true
+        },
+        {
+          "name": "create_vm", 
+          "methods": ["createInstance_noNet"],
+          "required": true
+        },
+        {
+          "name": "verify_creation",
+          "methods": ["get_instances"],
+          "required": false
+        }
+      ],
+      "execution_mode": "workflow",
+      "timeout": 120,
+      "retry_on_failure": false,
+      "max_retries": 0
+    },
+    "disk_management": {
+      "name": "磁盘管理操作",
+      "description": "创建或删除虚拟磁盘，支持批量操作",
+      "methods": ["createDisk_vstor", "deleteDisk"],
+      "execution_mode": "single",
+      "timeout": 60,
+      "retry_on_failure": true,
+      "max_retries": 1
+    },
+    "database_query": {
+      "name": "数据库查询",
+      "description": "执行数据库查询和分析",
+      "methods": ["db_query_simple"],
+      "execution_mode": "single",
+      "timeout": 30,
+      "retry_on_failure": true,
+      "max_retries": 2
+    },
+    "ssh_operations": {
+      "name": "SSH远程操作",
+      "description": "通过SSH执行远程命令和运维操作",
+      "methods": ["sshexecute_command"],
+      "execution_mode": "single",
+      "timeout": 90,
+      "retry_on_failure": true,
+      "max_retries": 1
+    }
+  },
+  "method_templates": {
+    "createInstance_noNet": {
+      "default_parameters": {
+        "videoModel": "virtio",
+        "balloonSwitch": false,
+        "numaEnable": false,
+        "bigPageEnable": false,
+        "vmActive": false,
+        "cloneType": "LINK",
+        "audioType": "ich6",
+        "adminPassword": "Admin@123",
+        "haEnable": true,
+        "priority": 1
+      },
+      "parameter_validation": {
+        "name": {"required": true, "type": "string", "max_length": 40},
+        "hostname": {"required": true, "type": "string", "max_length": 10},
+        "cpu": {"required": true, "type": "integer", "min": 1, "max": 128},
+        "memory": {"required": true, "type": "integer", "min": 1, "max": 1024},
+        "size": {"required": true, "type": "integer", "min": 10, "max": 10000},
+        "storname": {"required": true, "type": "string"},
+        "imageId": {"required": true, "type": "string"},
+        "videoModel": {"required": true, "type": "string", "enum": ["cirrus", "qxl", "virtio", "vga"]}
+      }
+    },
+    "createDisk_vstor": {
+      "default_parameters": {
+        "pageSize": "4K",
+        "compression": "Disabled",
+        "count": 1,
+        "readCache": true,
+        "iops": 1000,
+        "bandwidth": 100
+      },
+      "parameter_validation": {
+        "storageManageId": {"required": true, "type": "string"},
+        "pageSize": {"required": true, "type": "string", "enum": ["4K", "8K", "16K", "32K"]},
+        "compression": {"required": true, "type": "string", "enum": ["Disabled", "LZ4", "Gzip_opt", "Gzip_high"]},
+        "name": {"required": true, "type": "string", "max_length": 100},
+        "size": {"required": true, "type": "integer", "min": 1, "max": 100000},
+        "iops": {"required": true, "type": "integer", "min": 75, "max": 250000},
+        "bandwidth": {"required": true, "type": "integer", "min": 1, "max": 1000},
+        "count": {"required": true, "type": "integer", "min": 1, "max": 100},
+        "readCache": {"required": true, "type": "boolean"},
+        "zoneId": {"required": true, "type": "string"}
+      }
+    },
+    "sshexecute_command": {
+      "default_parameters": {
+        "port": 22,
+        "username": "cloud",
+        "key_path": "./id_rsa_cloud"
+      },
+      "parameter_validation": {
+        "hostip": {"required": true, "type": "string", "pattern": "^[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}$"},
+        "command": {"required": true, "type": "string", "min_length": 1},
+        "port": {"required": false, "type": "integer", "min": 1, "max": 65535},
+        "username": {"required": false, "type": "string", "min_length": 1},
+        "key_path": {"required": false, "type": "string", "min_length": 1}
+      }
+    }
+  },
+  "error_handling": {
+    "default_retry_policy": {
+      "max_retries": 3,
+      "base_delay": 1.0,
+      "backoff_factor": 2.0,
+      "circuit_breaker_threshold": 5,
+      "circuit_breaker_timeout": 60.0
+    },
+    "method_specific_policies": {
+      "createInstance_noNet": {
+        "max_retries": 2,
+        "base_delay": 2.0,
+        "circuit_breaker_threshold": 3
+      },
+      "createDisk_vstor": {
+        "max_retries": 1,
+        "base_delay": 3.0
+      },
+      "sshexecute_command": {
+        "max_retries": 1,
+        "base_delay": 1.0
+      }
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file_output": {
+      "enabled": false,
+      "path": "logs/mcp_client_skill.log",
+      "max_size": "10MB",
+      "backup_count": 5
+    },
+    "structured_logging": {
+      "enabled": true,
+      "include_context": true,
+      "include_execution_time": true,
+      "include_call_stack_on_error": false
+    }
+  },
+  "performance": {
+    "concurrent_execution": {
+      "enabled": false,
+      "max_workers": 3,
+      "timeout_per_method": 30
+    },
+    "caching": {
+      "enabled": true,
+      "cache_methods": ["getStorinfo", "getImagebystorageManageId"],
+      "cache_ttl": 300
+    },
+    "rate_limiting": {
+      "enabled": true,
+      "requests_per_second": 2,
+      "burst_size": 5
+    }
+  },
+  "monitoring": {
+    "metrics_collection": {
+      "enabled": true,
+      "collect_execution_time": true,
+      "collect_success_rate": true,
+      "collect_error_rates": true,
+      "collect_resource_usage": false
+    },
+    "alerts": {
+      "enabled": false,
+      "error_rate_threshold": 0.1,
+      "response_time_threshold": 30.0
+    }
+  }
+}

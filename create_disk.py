@@ -5,6 +5,16 @@ Volume Creator Script - 基于 volume-creator skill
 """
 
 import sys
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
@@ -16,10 +26,10 @@ import uuid
 
 def create_10gb_disk():
     """创建10GB虚拟磁盘"""
-    print("🎯 开始创建10GB虚拟磁盘...")
+    logger.info("🎯 开始创建10GB虚拟磁盘...")
     
     # 初始化认证和会话
-    print("📝 初始化认证会话...")
+    logger.info("📝 初始化认证会话...")
     from config import DEFAULT_PLATFORM_USER, DEFAULT_PLATFORM_PASSWORD
     
     # 使用指定凭据初始化ArcherAudit
@@ -31,7 +41,7 @@ def create_10gb_disk():
     session_result = audit.setSession()
     
     if not session_result:
-        print("❌ 认证失败，请检查配置")
+        logger.error("❌ 认证失败，请检查配置")
         return False
         
     # 初始化主机管理
@@ -44,25 +54,25 @@ def create_10gb_disk():
     volumes = Volumes(audit, host)
     
     # 获取存储管理信息
-    print("🔍 获取存储资源信息...")
+    logger.info("🔍 获取存储资源信息...")
     storage_info = host.getStorsbyDiskType()
     
     if not storage_info:
-        print("❌ 无法获取存储管理信息")
+        logger.error("❌ 无法获取存储管理信息")
         return False
     
     storage_list = storage_info
     if not storage_list:
-        print("❌ 没有可用的存储资源")
+        logger.error("❌ 没有可用的存储资源")
         return False
     
     # 使用第一个可用的存储管理ID
     storage_manage_id = storage_list[0].get('storageManageId')
-    print(f"✅ 使用存储管理ID: {storage_manage_id}")
+    logger.info(f"✅ 使用存储管理ID: {storage_manage_id}")
     
     # 使用Hosts中获取的zone信息
     zone_id = host.zone
-    print(f"✅ 使用区域ID: {zone_id}")
+    logger.info(f"✅ 使用区域ID: {zone_id}")
     
     # 根据存储性能限制调整参数（基于storage返回的性能信息）
     disk_config = {
@@ -78,47 +88,47 @@ def create_10gb_disk():
         "zoneId": zone_id or "default"
     }
     
-    print(f"📋 磁盘配置:")
-    print(f"   名称: {disk_config['name']}")
-    print(f"   大小: {disk_config['size']}GB")
-    print(f"   IOPS: {disk_config['iops']}")
-    print(f"   带宽: {disk_config['bandwidth']} MB/s")
-    print(f"   页面大小: {disk_config['pageSize']}")
-    print(f"   压缩方式: {disk_config['compression']}")
-    print(f"   读缓存: {'开启' if disk_config['readCache'] else '关闭'}")
+    logger.info(f"📋 磁盘配置:")
+    logger.info(f"   名称: {disk_config['name']}")
+    logger.info(f"   大小: {disk_config['size']}GB")
+    logger.info(f"   IOPS: {disk_config['iops']}")
+    logger.info(f"   带宽: {disk_config['bandwidth']} MB/s")
+    logger.info(f"   页面大小: {disk_config['pageSize']}")
+    logger.info(f"   压缩方式: {disk_config['compression']}")
+    logger.info(f"   读缓存: {'开启' if disk_config['readCache'] else '关闭'}")
     
     # 执行创建
-    print("🚀 开始创建磁盘...")
+    logger.info("🚀 开始创建磁盘...")
     result = volumes.createDisk_vstor(**disk_config)
     
     # 检查创建结果
     if isinstance(result, list) and len(result) > 0:
         disk_info = result[0]
-        print("✅ 虚拟磁盘创建成功!")
-        print(f"📁 磁盘ID: {disk_info.get('id')}")
-        print(f"📝 磁盘名称: {disk_info.get('name')}")
-        print(f"💾 磁盘大小: {disk_config['size']}GB")
-        print(f"⚡ IOPS: {disk_config['iops']}")
-        print(f"🌐 带宽: {disk_config['bandwidth']} MB/s")
+        logger.info("✅ 虚拟磁盘创建成功!")
+        logger.info(f"📁 磁盘ID: {disk_info.get('id')}")
+        logger.info(f"📝 磁盘名称: {disk_info.get('name')}")
+        logger.info(f"💾 磁盘大小: {disk_config['size']}GB")
+        logger.info(f"⚡ IOPS: {disk_config['iops']}")
+        logger.info(f"🌐 带宽: {disk_config['bandwidth']} MB/s")
         return True
     elif isinstance(result, dict) and 'data' in result and isinstance(result['data'], list) and len(result['data']) > 0:
         disk_info = result['data'][0]
-        print("✅ 虚拟磁盘创建成功!")
-        print(f"📁 磁盘ID: {disk_info.get('id')}")
-        print(f"📝 磁盘名称: {disk_info.get('name')}")
-        print(f"💾 磁盘大小: {disk_config['size']}GB")
-        print(f"⚡ IOPS: {disk_config['iops']}")
-        print(f"🌐 带宽: {disk_config['bandwidth']} MB/s")
+        logger.info("✅ 虚拟磁盘创建成功!")
+        logger.info(f"📁 磁盘ID: {disk_info.get('id')}")
+        logger.info(f"📝 磁盘名称: {disk_info.get('name')}")
+        logger.info(f"💾 磁盘大小: {disk_config['size']}GB")
+        logger.info(f"⚡ IOPS: {disk_config['iops']}")
+        logger.info(f"🌐 带宽: {disk_config['bandwidth']} MB/s")
         return True
     else:
-        print("❌ 虚拟磁盘创建失败:")
-        print(f"错误信息: {result}")
+        logger.error("❌ 虚拟磁盘创建失败:")
+        logger.info(f"错误信息: {result}")
         return False
 
 if __name__ == "__main__":
     success = create_10gb_disk()
     if success:
-        print("\n🎉 10GB虚拟磁盘创建完成!")
+        logger.info("\n🎉 10GB虚拟磁盘创建完成!")
     else:
-        print("\n💥 创建失败，请检查配置和日志")
+        logger.info("\n💥 创建失败，请检查配置和日志")
         sys.exit(1)

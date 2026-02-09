@@ -67,4 +67,4 @@ Qcow2_arm = [
 ]
 if __name__ == '__main__':
     for key,value in ISOs_x86.items():
-        print("iso:",key,value)
+        logger.info("iso:",key,value)

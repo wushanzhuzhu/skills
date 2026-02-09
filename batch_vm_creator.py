@@ -5,46 +5,56 @@
 """
 
 from vm_manager import VMManager
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import time
 
 def create_vm_batch_with_env_selection():
     """带环境选择的批量VM创建"""
     
-    print("🚀 智能批量VM创建器")
-    print("=" * 60)
+    logger.info("🚀 智能批量VM创建器")
+    logger.info("=" * 60)
     
     manager = VMManager()
     
     # 环境选择
-    print("\n🌐 选择目标环境:")
+    logger.info("\n🌐 选择目标环境:")
     env_id = manager.select_environment_interactive()
     
     if not env_id:
-        print("❌ 未选择环境，操作取消")
+        logger.error("❌ 未选择环境，操作取消")
         return False
     
     # 环境验证
     if not manager.check_environment(env_id):
-        print("❌ 环境连接失败，无法执行批量创建")
+        logger.error("❌ 环境连接失败，无法执行批量创建")
         return False
     
     # 资源发现
     if not manager.discover_resources():
-        print("❌ 资源发现失败")
+        logger.error("❌ 资源发现失败")
         return False
     
     # 模板选择
-    print("\n🎯 可用模板:")
+    logger.info("\n🎯 可用模板:")
     manager.templates.display_templates_table()
     
     template_options = list(manager.templates.templates.keys())
-    print(f"\n请选择模板: {', '.join(template_options)}")
+    logger.info(f"\n请选择模板: {', '.join(template_options)}")
     
     while True:
         template_choice = input("模板名称: ").strip()
         if template_choice in template_options:
             break
-        print("❌ 无效模板，请重新输入")
+        logger.error("❌ 无效模板，请重新输入")
     
     # 数量输入
     while True:
@@ -52,12 +62,12 @@ def create_vm_batch_with_env_selection():
             vm_count = int(input("创建数量 (1-10): ").strip())
             if 1 <= vm_count <= 10:
                 break
-            print("❌ 数量必须在1-10之间")
+            logger.error("❌ 数量必须在1-10之间")
         except ValueError:
-            print("❌ 请输入有效数字")
+            logger.error("❌ 请输入有效数字")
     
     # 高级配置（可选）
-    print("\n⚙️ 高级配置 (可选，直接回车跳过):")
+    logger.info("\n⚙️ 高级配置 (可选，直接回车跳过):")
     
     custom_overrides = {}
     
@@ -67,7 +77,7 @@ def create_vm_batch_with_env_selection():
         try:
             custom_overrides["cpu"] = int(cpu_input)
         except ValueError:
-            print("⚠️ CPU输入无效，使用默认值")
+            logger.info("⚠️ CPU输入无效，使用默认值")
     
     # 内存自定义
     memory_input = input("内存大小GB (回车使用模板默认): ").strip()
@@ -75,7 +85,7 @@ def create_vm_batch_with_env_selection():
         try:
             custom_overrides["memory"] = int(memory_input)
         except ValueError:
-            print("⚠️ 内存输入无效，使用默认值")
+            logger.info("⚠️ 内存输入无效，使用默认值")
     
     # 磁盘大小自定义
     size_input = input("磁盘大小GB (回车使用模板默认): ").strip()
@@ -83,7 +93,7 @@ def create_vm_batch_with_env_selection():
         try:
             custom_overrides["size"] = int(size_input)
         except ValueError:
-            print("⚠️ 磁盘大小输入无效，使用默认值")
+            logger.info("⚠️ 磁盘大小输入无效，使用默认值")
     
     # 高可用设置
     ha_input = input("启用高可用 (y/n, 回车使用模板默认): ").strip().lower()
@@ -98,20 +108,20 @@ def create_vm_batch_with_env_selection():
         custom_overrides["vmActive"] = False
     
     # 确认创建
-    print(f"\n📋 创建配置确认:")
-    print(f"   环境: {manager.connection_info['name']}")
-    print(f"   模板: {template_choice}")
-    print(f"   数量: {vm_count}")
+    logger.info(f"\n📋 创建配置确认:")
+    logger.info(f"   环境: {manager.connection_info['name']}")
+    logger.info(f"   模板: {template_choice}")
+    logger.info(f"   数量: {vm_count}")
     if custom_overrides:
-        print(f"   自定义配置: {custom_overrides}")
+        logger.info(f"   自定义配置: {custom_overrides}")
     
     confirm = input("\n确认创建? (y/n): ").strip().lower()
     if confirm != 'y':
-        print("❌ 操作已取消")
+        logger.error("❌ 操作已取消")
         return False
     
     # 执行批量创建
-    print(f"\n🔥 开始批量创建 {vm_count} 个VM...")
+    logger.info(f"\n🔥 开始批量创建 {vm_count} 个VM...")
     results = manager.create_batch_vms(
         template_choice, 
         vm_count, 
@@ -139,7 +149,7 @@ def create_vm_batch_quick(template_name: str, vm_count: int,
     if not manager.discover_resources():
         return False
     
-    print(f"\n🚀 在环境 '{manager.connection_info['name']}' 中创建 {vm_count} 个VM...")
+    logger.info(f"\n🚀 在环境 '{manager.connection_info['name']}' 中创建 {vm_count} 个VM...")
     
     results = manager.create_batch_vms(
         template_name,
@@ -153,8 +163,8 @@ def create_vm_batch_quick(template_name: str, vm_count: int,
 def create_scenario_vms():
     """场景化VM创建"""
     
-    print("🎯 场景化VM创建")
-    print("=" * 60)
+    logger.info("🎯 场景化VM创建")
+    logger.info("=" * 60)
     
     scenarios = {
         "1": {
@@ -187,12 +197,12 @@ def create_scenario_vms():
         }
     }
     
-    print("📋 预定义场景:")
+    logger.info("📋 预定义场景:")
     for key, scenario in scenarios.items():
-        print(f"   {key}. {scenario['name']}")
-        print(f"      {scenario['description']}")
-        print(f"      模板: {scenario['template']}, 数量: {scenario['count']}")
-        print()
+        logger.info(f"   {key}. {scenario['name']}")
+        logger.info(f"      {scenario['description']}")
+        logger.info(f"      模板: {scenario['template']}, 数量: {scenario['count']}")
+        logger.info()
     
     choice = input("选择场景 (1-4): ").strip()
     
@@ -208,7 +218,7 @@ def create_scenario_vms():
         if not manager.discover_resources():
             return False
         
-        print(f"\n🚀 执行场景: {scenario['name']}")
+        logger.info(f"\n🚀 执行场景: {scenario['name']}")
         
         results = manager.create_batch_vms(
             scenario["template"],
@@ -219,7 +229,7 @@ def create_scenario_vms():
         
         return results
     else:
-        print("❌ 无效场景选择")
+        logger.error("❌ 无效场景选择")
         return False
 
 from typing import Dict, List
@@ -233,8 +243,8 @@ def create_vm_from_config_file(config_file: str):
         with open(config_file, 'r', encoding='utf-8') as f:
             config = json.load(f)
         
-        print(f"📁 从配置文件创建VM: {config_file}")
-        print("=" * 60)
+        logger.info(f"📁 从配置文件创建VM: {config_file}")
+        logger.info("=" * 60)
         
         manager = VMManager()
         
@@ -253,7 +263,7 @@ def create_vm_from_config_file(config_file: str):
         # 从配置文件创建
         vm_configs = config.get("vms", [])
         if not vm_configs:
-            print("❌ 配置文件中没有VM配置")
+            logger.error("❌ 配置文件中没有VM配置")
             return False
         
         results = {
@@ -263,10 +273,10 @@ def create_vm_from_config_file(config_file: str):
             "start_time": time.time()
         }
         
-        print(f"\n🔥 根据配置文件创建 {len(vm_configs)} 个VM...")
+        logger.info(f"\n🔥 根据配置文件创建 {len(vm_configs)} 个VM...")
         
         for i, vm_config in enumerate(vm_configs, 1):
-            print(f"\n📁 创建第 {i}/{len(vm_configs)} 个VM: {vm_config.get('name', f'vm-{i}')}")
+            logger.info(f"\n📁 创建第 {i}/{len(vm_configs)} 个VM: {vm_config.get('name', f'vm-{i}')}")
             
             try:
                 # 准备完整配置
@@ -286,7 +296,7 @@ def create_vm_from_config_file(config_file: str):
                         "vm_name": full_config.get("name", f"vm-{i}"),
                         "error": error_msg
                     })
-                    print(f"❌ 第 {i} 个VM配置验证失败")
+                    logger.error(f"❌ 第 {i} 个VM配置验证失败")
                     continue
                 
                 # 创建VM
@@ -298,14 +308,14 @@ def create_vm_from_config_file(config_file: str):
                         "vm_id": result["vm_id"],
                         "vm_name": result["vm_name"]
                     })
-                    print(f"✅ 第 {i} 个VM创建成功")
+                    logger.info(f"✅ 第 {i} 个VM创建成功")
                 else:
                     results["failed"].append({
                         "vm_num": i,
                         "vm_name": full_config.get("name", f"vm-{i}"),
                         "error": result["error"]
                     })
-                    print(f"❌ 第 {i} 个VM创建失败: {result['error']}")
+                    logger.error(f"❌ 第 {i} 个VM创建失败: {result['error']}")
                 
                 time.sleep(2)  # 避免API频率限制
                     
@@ -315,7 +325,7 @@ def create_vm_from_config_file(config_file: str):
                     "vm_name": vm_config.get("name", f"vm-{i}"),
                     "error": str(e)
                 })
-                print(f"❌ 第 {i} 个VM创建出错: {e}")
+                logger.error(f"❌ 第 {i} 个VM创建出错: {e}")
         
         results["end_time"] = time.time()
         results["duration"] = results["end_time"] - results["start_time"]
@@ -324,13 +334,13 @@ def create_vm_from_config_file(config_file: str):
         return manager.generate_batch_report(results)
         
     except FileNotFoundError:
-        print(f"❌ 配置文件不存在: {config_file}")
+        logger.error(f"❌ 配置文件不存在: {config_file}")
         return False
     except json.JSONDecodeError:
-        print(f"❌ 配置文件格式错误: {config_file}")
+        logger.error(f"❌ 配置文件格式错误: {config_file}")
         return False
     except Exception as e:
-        print(f"❌ 处理配置文件失败: {e}")
+        logger.error(f"❌ 处理配置文件失败: {e}")
         return False
 
 def main():
@@ -338,14 +348,14 @@ def main():
     import sys
     
     if len(sys.argv) < 2:
-        print("🔧 批量VM创建器")
-        print("python batch_vm_creator.py [命令] [参数]")
-        print("\n命令:")
-        print("  interactive                    - 交互式创建")
-        print("  quick <template> <count> [env] - 快速创建")
-        print("  scenario                      - 场景化创建")
-        print("  config <config_file>          - 从配置文件创建")
-        print("  example-config                 - 生成示例配置文件")
+        logger.info("🔧 批量VM创建器")
+        logger.info("python batch_vm_creator.py [命令] [参数]")
+        logger.info("\n命令:")
+        logger.info("  interactive                    - 交互式创建")
+        logger.info("  quick <template> <count> [env] - 快速创建")
+        logger.info("  scenario                      - 场景化创建")
+        logger.info("  config <config_file>          - 从配置文件创建")
+        logger.info("  example-config                 - 生成示例配置文件")
         return
     
     command = sys.argv[1]
@@ -355,7 +365,7 @@ def main():
     
     elif command == "quick":
         if len(sys.argv) < 4:
-            print("❌ 请提供模板名称和VM数量")
+            logger.error("❌ 请提供模板名称和VM数量")
             return
         
         template = sys.argv[2]
@@ -369,7 +379,7 @@ def main():
     
     elif command == "config":
         if len(sys.argv) < 3:
-            print("❌ 请提供配置文件路径")
+            logger.error("❌ 请提供配置文件路径")
             return
         
         config_file = sys.argv[2]
@@ -379,7 +389,7 @@ def main():
         generate_example_config()
     
     else:
-        print(f"❌ 未知命令: {command}")
+        logger.error(f"❌ 未知命令: {command}")
 
 def generate_example_config():
     """生成示例配置文件"""
@@ -433,7 +443,7 @@ def generate_example_config():
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(example_config, f, ensure_ascii=False, indent=2)
     
-    print(f"✅ 示例配置文件已生成: {filename}")
+    logger.info(f"✅ 示例配置文件已生成: {filename}")
 
 if __name__ == "__main__":
     main()

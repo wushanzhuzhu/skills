@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-02-04T13:06:19.002739",
+  "environment": "172.118.34.100",
+  "username": "admin",
+  "operation": {
+    "action": "get-ref",
+    "disk_name": "replication-test-disk-000"
+  },
+  "result": {
+    "success": true,
+    "message": "获取磁盘 replication-test-disk-000 的引用ID成功",
+    "disk_name": "replication-test-disk-000",
+    "stack_ref_id": "ref-1770181579",
+    "disk_id": "disk-1770181579"
+  }
+}

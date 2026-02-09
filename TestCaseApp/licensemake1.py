@@ -1,4 +1,14 @@
 from flask import Flask, request, render_template_string, jsonify, render_template
+import logging
+
+# 配置日志
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+logger = logging.getLogger(__name__)
+
 import requests
 import re
 from datetime import datetime
@@ -76,10 +86,10 @@ class LicenseService:
             "partyUuid": "a7d2-6187-bf9a-4998-bb19"
         }
 
-        print("LicenseService import_data:", import_data)
+        logger.info("LicenseService import_data:", import_data)
 
         import_resp = session.get(import_url, params=import_data)
-        print("LicenseService import_resp:", import_resp)
+        logger.info("LicenseService import_resp:", import_resp)
 
         if import_resp.status_code != 200:
             raise Exception("导入license失败")
@@ -116,7 +126,7 @@ def permit_endpoint():
     numArstorCPUs = request.form['numArstorCPUs']
     numArstorNodes = request.form['numArstorNodes']
     serviceDate = request.form['cert_start_date']
-    print("serviceDate:%s",serviceDate)
+    logger.info("serviceDate:%s",serviceDate)
     try:
         result = LicenseService.get_permit_info(cluster_id, arch, numNodes, length, numCPUs, numArstorCPUs, numArstorNodes, serviceDate)
         return render_template('index.html', result=result)
